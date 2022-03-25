@@ -10,4 +10,9 @@ This project will cover Sustainability Goal 12, and implemented, will present a 
 
 Users can implement this project by downloading a zip folder of the repository which is located in the menu under the green button, "code", on the top right corner of the project window. Preferably, the user will unzip the file and open the file with code, to access all of the material.
 
-Requests concerning the usage and/or execution of the project, can be directed to the contributors through E-mail; - mariaamy@stud.ntnu.no - milles@stud.ntnu.no - mathiakk@stud.ntnu.no
+Requests concerning the usage and/or execution of the project, can be directed to the contributors through E-mail; 
+- mariaamy@stud.ntnu.no
+- milles@stud.ntnu.no 
+- mathiakk@stud.ntnu.no
+
+The project is maintained and contributed to by Marianne Mytting, Mille Dishington and Mathias Kvarsvik Kvalvåg.

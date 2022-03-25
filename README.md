@@ -15,4 +15,6 @@ Requests concerning the usage and/or execution of the project, can be directed t
 - milles@stud.ntnu.no 
 - mathiakk@stud.ntnu.no
 
+Within this project, we're using Visual Studio Code as the main technology for implementing the different development components. For reference, the HTML contains the structures of the page. The SCSS (Sass) contains styling, compiled into CSS. Lastly, the JavaScript is applied for the purpose of the on-scroll animations to be put into effect.
+
 The project is maintained and contributed to by Marianne Mytting, Mille Dishington and Mathias Kvarsvik Kvalvåg.

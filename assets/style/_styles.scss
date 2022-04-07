@@ -7,7 +7,70 @@
 body {
     background: linear-gradient(85deg, #C4ECF4, #EAECD2 );
     height: auto;
+    overflow-x: hidden;
 }
+
+.information__paragraph--introduction {
+  font-size: 3rem;
+  margin-top: -15rem;
+  animation: textfromleft 5s forwards ease-out;
+  animation-iteration-count: 1;
+}
+
+.svg__arm--animated {
+  transform: translatey(-100%) translatex(785%);
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: armrotate 3s forwards ease-out;
+}
+
+.cola__box--static {
+  animation: colapath 15s forwards ease-out;
+  transform: translatey(-100%) translatex(-100%);
+}
+
+
+.plasticbag--static {
+  animation: plasticbagpath 10s 14s forwards ease-in-out;
+  transform: translate(-30%, 10%);
+  opacity: 0%;
+}
+
+
+
+
+#jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: movejellyfishlegs 3s infinite alternate;
+}
+
+
+.jellyfish {
+    opacity: 50%;
+    animation: movejellyfish 3s infinite alternate;
+}
+
+
+#sturtle__frontfoot--right,
+#sturtle__backfoot--right,
+#sturtle__frontfoot--left,
+#sturtle__backfoot--left {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: turtlefeet 2s infinite alternate linear;
+}
+
+
+#mouth {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: turtlemouth 5s ease-out infinite alternate;
+}
+
+
 
 section {
     min-height: 100vh;
@@ -155,60 +218,12 @@ section:nth-child(1) {
     animation: fade-right 1.5s ease-in;
   }
   
-  
-  
-  @keyframes fade-bottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fade-left {
-    0% {
-      transform: translateX(-100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fade-right {
-    0% {
-      transform: translateX(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-
-
-  
   .active.fall {
     animation: fall 10s linear forwards;
     position: relative;
     transform: translatey(-80%);
   }
   
-  @keyframes fall {
-    10% {transform: translatey(0%);}
-    20% {transform: translatey(10vh);}
-    30% {transform: translatey(10vh);}
-    40% {transform: translatey(10vh);}
-    50% {transform: translatey(10vh);}
-    60% {transform: translatey(10vh);}
-    70% {transform: translatey(10vh);}
-    80% {transform: translatey(100vh);}
-    90% {transform: translatey(100vh);}
-    100% {transform: translatey(100vh);}
-  }
+  
   
   

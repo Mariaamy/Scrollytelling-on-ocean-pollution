@@ -1,0 +1,35 @@
+<svg width="178" height="259" viewBox="0 0 178 259" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 30">
+<g id="Group 16">
+<g id="sjellyfish__leg--five">
+<path id="Vector 41" d="M136 89C143.074 106.06 164 120.977 164 140C164 152.361 156.288 163.35 156 175.444C155.721 187.151 160.439 199.117 169.111 207C177.959 215.044 176 223.189 176 235" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g id="sjellyfish__leg--four">
+<path id="Vector 42" d="M116 91C125.572 102.104 143.228 117.736 136 134C129.5 148.626 124 155.112 124 172C124 180.135 123.539 185.41 129.556 191.667C132.932 195.178 135.801 195.69 139.111 199C151.929 211.818 142 241.145 142 257" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g id="sjellyfish__leg--one">
+<path id="Vector 43" d="M55.9999 93C43.3959 102.4 31.5235 113.735 21.3333 125.778C17.7551 130.006 21.2986 135.133 22.8888 139.222C25.8033 146.717 23.1215 148.344 28.8888 154.111C32.3592 157.581 38.7526 162.95 40.8888 167.222C47.1001 179.645 44.5977 190.448 43.9999 203C43.6444 210.466 39.9999 216.948 39.9999 224.556C39.9999 230.037 39.9999 235.519 39.9999 241" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g id="sjellyfish__leg--two">
+<path id="Vector 44" d="M72 97C65.2513 110.919 54.5142 132.414 60.2222 148.111C61.316 151.119 66.626 154.981 69.1111 157.111C73.9143 161.228 75.4816 168.696 79 173.778C86.7969 185.04 78.4673 194 75.5555 205C72.2501 217.487 72 230.142 72 243" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g id="sjellyfish__leg--three">
+<path id="Vector 45" d="M94 99C96.5186 113.272 101.715 125.207 107.111 138.556C109.371 144.146 112 146.259 112 152.556C112 163.791 107.071 180.523 101.111 189.889C94.6789 199.997 104 213.358 104 223C104 228.318 108 231.452 108 237.778C108 242.852 108 247.926 108 253" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<path id="Rectangle 180" d="M14.0177 37.0882L80.9912 0L154.195 27.1029L176 84.1618L88.7788 97L0 84.1618L14.0177 37.0882Z" fill="url(#paint0_radial_0_1)"/>
+</g>
+<path id="Rectangle 181" d="M19.5 67.1514V84.4185L4.09964 82.0851L10.2418 53.2641L19.5 67.1514Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 182" d="M11.5391 51.4191L15.4259 36.8434L50.6257 18.7678L20.9983 66.5539L11.5391 51.4191Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 183" d="M24 66.6409L53.8613 17.8674L79.8127 2.57464L24 83.888V66.6409Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 184" d="M173.303 83.0658L128.284 87.4698L83.5461 3.40147L152.614 27.8935L173.303 83.0658Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 185" d="M75.5124 27.3892L75.5034 27.4288L75.5009 27.4693L71.5348 91.9197L28.846 85.1283L79.9063 8.05619L75.5124 27.3892Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 186" d="M124.731 88.0904L101.39 90.9485L83.6386 10.8278L94.563 28.7438L124.731 88.0904Z" stroke="black" stroke-opacity="0.37"/>
+<path id="Rectangle 187" d="M85.0111 33.6048L85.011 33.6048L85.0131 33.6136L98.8699 93H75.0417L81.2256 15.9392L85.0111 33.6048Z" stroke="black" stroke-opacity="0.37"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(88 31) rotate(90) scale(66 119.753)">
+<stop stop-color="#F1C6F8"/>
+<stop offset="1" stop-color="#DAD8DA" stop-opacity="0.33"/>
+</radialGradient>
+</defs>
+</svg>

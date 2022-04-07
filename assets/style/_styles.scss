@@ -1,1 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: linear-gradient(85deg, #C4ECF4, #EAECD2 );
+    height: auto;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+}
+
+section:nth-child(1) {
+    background: linear-gradient(180deg, #CEF6F6, #9FD8CD);
+    margin-top: 30em;
+    color: #e0ffff;
+  }
+  section:nth-child(2) {
+    background: linear-gradient(180deg, #9FD8CD, #3499A7);
+  }
+  section:nth-child(3) {
+    background: linear-gradient(180deg, #3499A7, #207B98);
+  }
+  section:nth-child(4) {
+    background: linear-gradient(180deg, #207B98,  #478ac8);
+  }
+
+  section:nth-child(5) {
+    background: linear-gradient(180deg,#207B98, #1e6b85);
+  }
+
+  section:nth-child(6) {
+    background: linear-gradient(180deg,  #1e6b85, #205a98);
+  }
+
+  section:nth-child(7) {
+    background: linear-gradient(180deg, #205a98,  #1c4f85);
+  }
+
+  section:nth-child(8) {
+    background: linear-gradient(180deg, #1c4f85,  #205893);
+  }
+
+  section:nth-child(9) {
+    background: linear-gradient(180deg,  #205893,   #1f5085);
+  }
+
+  section:nth-child(10) {
+    background: linear-gradient(180deg, #1f5085,  #265588);
+  }
+
+  section:nth-child(11) {
+    background: linear-gradient(180deg, #265588,  #214c79);
+  }
+
+  section:nth-child(12) {
+    background: linear-gradient(180deg, #214c79,  #133556);
+  }
+
+  section:nth-child(12) .ocean__bottom--yellow {
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(162, 160, 143, 0.757);
+    transform: translatey(1000%);
+  }
+
+
+
+  section .container {
+    margin: 100px;
+  }
+
+  section .text-container {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    background: #00c2cb;
+  }
+  section h3 {
+    font-size: 30px;
+    margin-top: 200px;
+    padding-right: 10px;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  section:nth-child(1) .text-box {
+    width: 40vw;
+    height: 50vh;
+    position: relative;
+  }
+  
+  section:nth-child(2) .text-box {
+    width: 40vw;
+    height: 50vh;
+    position: relative;
+  }
+  
+  section:nth-child(3) .text-box {
+    width: 70vw;
+    height: 70vh;
+    position: relative;
+    display: none;
+  }
+  
+  section:nth-child(4) .text-box {
+    width: 20vw;
+    height: 20vh;
+    position: relative;
+  }
+ 
+  
+  section:nth-child(4) {
+    transform: scale(250%);
+    position: absolute;
+    top: 50%;
+    left: 60%;
+  }
+  
+  section:nth-child(4) {
+    transform: scale(250%);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+  }
+  
+  
+  section:nth-child(5) {
+    background-color: lightblue;
+  }
+  
+  
+  
+  .reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1.5s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1.5s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1.5s ease-in;
+  }
+  
+  
+  
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+
+  
+  .active.fall {
+    animation: fall 10s linear forwards;
+    position: relative;
+    transform: translatey(-80%);
+  }
+  
+  @keyframes fall {
+    10% {transform: translatey(0%);}
+    20% {transform: translatey(10vh);}
+    30% {transform: translatey(10vh);}
+    40% {transform: translatey(10vh);}
+    50% {transform: translatey(10vh);}
+    60% {transform: translatey(10vh);}
+    70% {transform: translatey(10vh);}
+    80% {transform: translatey(100vh);}
+    90% {transform: translatey(100vh);}
+    100% {transform: translatey(100vh);}
+  }
+  
+  

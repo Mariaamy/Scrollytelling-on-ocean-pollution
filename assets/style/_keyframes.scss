@@ -1,0 +1,108 @@
+@keyframes textfromleft {
+    from {transform: translatex(-250%);}
+    to {transform: translatex(100%)};
+  }
+
+@keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fall {
+    10% {transform: translatey(0%);}
+    20% {transform: translatey(10vh);}
+    30% {transform: translatey(10vh);}
+    40% {transform: translatey(10vh);}
+    50% {transform: translatey(10vh);}
+    60% {transform: translatey(10vh);}
+    70% {transform: translatey(10vh);}
+    80% {transform: translatey(100vh);}
+    90% {transform: translatey(100vh);}
+    100% {transform: translatey(100vh);}
+  }
+
+  @keyframes colapath {
+    0% {
+      transform: translateY(-100%) translatex(-150%) scale(30%);
+    }
+    25% {
+      transform: translateY(-125%) translatex(-300%) scale(50%);
+    }
+    50% {
+      transform: translateY(-100%) translatex(-330%) scale(70%);
+    }
+    75% {
+      transform: translateY(0%) translatex(-250%) scale(90%);
+      opacity: 100%;
+    }
+    100% {
+      transform: translateY(100%) translatex(-200%) scale(100%);
+      opacity: 0%
+    }
+  }
+
+  @keyframes plasticbagpath {
+    0% {
+      opacity: 0%;
+      transform: translate(-30%, 10%);
+    }
+    50% {
+      opacity: 50%;
+      transform: translate(-50%, 100%);
+    }
+    100% {
+      transform: translate(-50%, 100%)
+    }
+  }
+
+  @keyframes armrotate {
+    from {transform: translatey(-100%) translatex(785%) rotate(0deg);}
+    to   {transform: translatey(-100%) translatex(785%) rotate(60deg);}
+  }
+
+  @keyframes movejellyfishlegs {
+    from {transform: rotatez(-5deg);}
+    to {transform: rotatez(5deg);}
+}
+
+@keyframes movejellyfish {
+  from {transform: translateX(10%) scale(90%);}
+  to {transform: translate(-5%, 10%) scale(100%);}
+}
+
+@keyframes turtlefeet {
+from {transform: rotate(30deg);}
+to {transform: rotate(-20deg);}
+}
+
+@keyframes turtlemouth {
+from {transform: rotate(15deg);}
+to {transform: rotate(-30deg);}
+}

@@ -1,0 +1,6 @@
+<svg width="47" height="250" viewBox="0 0 47 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="straw">
+<path id="straw__place--bottom" d="M13 39.5H14C19.2467 39.5 23.5 43.7533 23.5 49V240C23.5 245.247 19.2467 249.5 14 249.5H13C7.75329 249.5 3.5 245.247 3.5 240V49C3.5 43.7533 7.7533 39.5 13 39.5Z" fill="#0A0000" stroke="black"/>
+<rect id="straw__place--top" x="27.0087" width="21.7275" height="60.5717" rx="8.77911" transform="rotate(26.4807 27.0087 0)" fill="#0A0000"/>
+</g>
+</svg>

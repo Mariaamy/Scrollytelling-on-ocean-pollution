@@ -1,76 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @extend %reset;
 }
 
 body {
-    background: linear-gradient(85deg, #C4ECF4, #EAECD2 );
+    background: linear-gradient(85deg, $sky-blue, $sky-yellow);
     height: auto;
     overflow-x: hidden;
 }
 
+.text-box {
+  transform: translate(0%, 10%);
+  color: $text-in-container;
+  @include font(sans-serif, larger);
+  text-align: center;
+}
+
 .information__paragraph--introduction {
-  font-size: 3rem;
+  @include font(sans-serif, 3rem);
   margin-top: -15rem;
   animation: textfromleft 5s forwards ease-out;
   animation-iteration-count: 1;
 }
 
-.svg__arm--animated {
+.active.armrotate {
+  @extend %transform;
   transform: translatey(-100%) translatex(785%);
-  transform-origin: center;
-  transform-box: fill-box;
   animation: armrotate 3s forwards ease-out;
 }
 
-.cola__box--static {
+.active.colapath {
   animation: colapath 15s forwards ease-out;
   transform: translatey(-100%) translatex(-100%);
 }
 
 
-.plasticbag--static {
-  animation: plasticbagpath 10s 14s forwards ease-in-out;
-  transform: translate(-30%, 10%);
+.active.plasticbagpath {
+  animation: plasticbagpath 15s forwards ease-in-out;
   opacity: 0%;
+  z-index: 2;
 }
-
-
-
 
 #jellyfish__leg--two,
 #jellyfish__leg--four,
 #jellyfish__leg--six {
-    transform-origin: center;
-    transform-box: fill-box;
+    @extend %transform;
     animation: movejellyfishlegs 3s infinite alternate;
 }
 
-
 .jellyfish {
     opacity: 50%;
-    animation: movejellyfish 3s infinite alternate;
+    animation: movejellyfish 5s infinite forwards;
 }
 
+.active.movesmallturtle {
+  transform: translate(-50%, 150%);
+  animation: movesmallturtle 6s 1.5s forwards;
+}
 
 #sturtle__frontfoot--right,
 #sturtle__backfoot--right,
 #sturtle__frontfoot--left,
 #sturtle__backfoot--left {
-  transform-origin: center;
-  transform-box: fill-box;
+  @extend %transform;
   animation: turtlefeet 2s infinite alternate linear;
 }
 
-
-#mouth {
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: turtlemouth 5s ease-out infinite alternate;
+#sturtle__mouth {
+  @extend %transform;
+  animation: turtlemouth 1s ease-out infinite alternate;
 }
-
-
 
 section {
     min-height: 100vh;
@@ -78,60 +76,57 @@ section {
 }
 
 section:nth-child(1) {
-    background: linear-gradient(180deg, #CEF6F6, #9FD8CD);
+    background: linear-gradient(180deg, $water1, $water2);
     margin-top: 30em;
-    color: #e0ffff;
+    color: $heading;
   }
   section:nth-child(2) {
-    background: linear-gradient(180deg, #9FD8CD, #3499A7);
+    background: linear-gradient(180deg, $water2, $water3);
   }
   section:nth-child(3) {
-    background: linear-gradient(180deg, #3499A7, #207B98);
+    background: linear-gradient(180deg, $water3, $water4);
   }
   section:nth-child(4) {
-    background: linear-gradient(180deg, #207B98,  #478ac8);
+    background: linear-gradient(180deg, $water4,  $water5);
   }
 
   section:nth-child(5) {
-    background: linear-gradient(180deg,#207B98, #1e6b85);
+    background: linear-gradient(180deg, $water5, $water6);
   }
 
   section:nth-child(6) {
-    background: linear-gradient(180deg,  #1e6b85, #205a98);
+    background: linear-gradient(180deg,  $water6, $water7);
   }
 
   section:nth-child(7) {
-    background: linear-gradient(180deg, #205a98,  #1c4f85);
+    background: linear-gradient(180deg, $water7, $water8);
   }
 
   section:nth-child(8) {
-    background: linear-gradient(180deg, #1c4f85,  #205893);
+    background: linear-gradient(180deg, $water8,  $water9);
   }
 
   section:nth-child(9) {
-    background: linear-gradient(180deg,  #205893,   #1f5085);
+    background: linear-gradient(180deg,  $water9, $water10);
   }
 
   section:nth-child(10) {
-    background: linear-gradient(180deg, #1f5085,  #265588);
+    background: linear-gradient(180deg, $water10, $water11);
   }
 
   section:nth-child(11) {
-    background: linear-gradient(180deg, #265588,  #214c79);
+    background: linear-gradient(180deg, $water11, $water12);
   }
 
   section:nth-child(12) {
-    background: linear-gradient(180deg, #214c79,  #133556);
+    background: linear-gradient(180deg, $water12, $water13);
   }
 
   section:nth-child(12) .ocean__bottom--yellow {
-    width: 100vw;
-    height: 10vh;
-    background-color: rgba(162, 160, 143, 0.757);
+    @include wh(100vw, 10vh);
+    background-color: $ocean-bottom;
     transform: translatey(1000%);
   }
-
-
 
   section .container {
     margin: 100px;
@@ -139,66 +134,69 @@ section:nth-child(1) {
 
   section .text-container {
     display: flex;
-    margin: 20px;
-    padding: 20px;
-    background: #00c2cb;
-  }
-  section h3 {
-    font-size: 30px;
-    margin-top: 200px;
-    padding-right: 10px;
-    text-align: center;
-    justify-content: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    @include mp(20px, 20px);
+    background: $container;
   }
 
-  section:nth-child(1) .text-box {
-    width: 40vw;
-    height: 50vh;
-    position: relative;
-  }
+  /*
+  Utkommentert kode er utkommentert fordi vi ikke
+  bruker det. Disse er ikke nødvendig med mindre vi finner ut
+  at vi vil ha et tekstfelt til etc. om ikke, kan de trygt slettes.
+  */
+
+
+  // section h3 {
+  //   font-size: 30px;
+  //   margin-top: 200px;
+  //   padding-right: 10px;
+  //   text-align: center;
+  //   justify-content: center;
+  //   text-transform: uppercase;
+  //   margin-bottom: 10px;
+  // }
+
+  // section:nth-child(1) .text-box {
+  //   width: 40vw;
+  //   height: 50vh;
+  //   position: relative;
+  // }
   
   section:nth-child(2) .text-box {
-    width: 40vw;
-    height: 50vh;
+    @include wh(40vw, 50vh);
     position: relative;
   }
   
-  section:nth-child(3) .text-box {
-    width: 70vw;
-    height: 70vh;
-    position: relative;
-    display: none;
-  }
+  // section:nth-child(3) .text-box {
+  //   width: 70vw;
+  //   height: 70vh;
+  //   position: relative;
+  //   display: none;
+  // }
   
-  section:nth-child(4) .text-box {
-    width: 20vw;
-    height: 20vh;
-    position: relative;
-  }
+  // section:nth-child(4) .text-box {
+  //   width: 20vw;
+  //   height: 20vh;
+  //   position: relative;
+  // }
  
   
-  section:nth-child(4) {
-    transform: scale(250%);
-    position: absolute;
-    top: 50%;
-    left: 60%;
-  }
+  // section:nth-child(4) {
+  //   transform: scale(250%);
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 60%;
+  // }
   
-  section:nth-child(4) {
-    transform: scale(250%);
-    position: absolute;
-    top: 50%;
-    left: 45%;
-  }
+  // section:nth-child(4) {
+  //   transform: scale(250%);
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 45%;
+  // }
   
-  
-  section:nth-child(5) {
-    background-color: lightblue;
-  }
-  
-  
+  // section:nth-child(5) {
+  //   background-color: lightblue;
+  // }
   
   .reveal {
     position: relative;
@@ -208,22 +206,15 @@ section:nth-child(1) {
   .reveal.active {
     opacity: 1;
   }
-  .active.fade-bottom {
-    animation: fade-bottom 1.5s ease-in;
-  }
+  // .active.fade-bottom {
+  //   animation: fade-bottom 1.5s ease-in;
+  // }
   .active.fade-left {
-    animation: fade-left 1.5s ease-in;
+    animation: fade-left 3s ease-in forwards;
   }
-  .active.fade-right {
-    animation: fade-right 1.5s ease-in;
-  }
-  
-  .active.fall {
-    animation: fall 10s linear forwards;
-    position: relative;
-    transform: translatey(-80%);
-  }
-  
+  // .active.fade-right {
+  //   animation: fade-right 1.5s ease-in;
+  // }
   
   
   

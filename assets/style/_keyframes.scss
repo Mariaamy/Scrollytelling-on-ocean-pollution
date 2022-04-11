@@ -3,6 +3,11 @@
     to {transform: translatex(100%)};
   }
 
+@keyframes objectfromright {
+  from {transform: translatex(410%) translateY(60%)}
+  to {transform: translatex(-100%) translateY(60%)};
+}
+
 @keyframes fade-bottom {
     0% {
       transform: translateY(50px);
@@ -90,6 +95,16 @@
   @keyframes movejellyfishlegs {
     from {transform: rotatez(-5deg);}
     to {transform: rotatez(5deg);}
+}
+
+@keyframes movejellyfishlegsright {
+  from {transform: rotatez(3deg);}
+  to {transform: rotatez(-15deg);}
+}
+
+@keyframes movejellyfishlegsrightback {
+  from {transform: rotatez(0deg);}
+  to {transform: rotatez(-5deg);}
 }
 
 @keyframes movejellyfish {

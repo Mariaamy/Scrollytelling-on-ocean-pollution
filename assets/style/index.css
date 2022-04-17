@@ -1,15 +1,4 @@
-
 @charset "UTF-8";
-
-/*
-$base-color: #c6538c;
-$border-dark: rgba($base-color, 0.88);
-
-.alert {
-  border: 1px solid $border-dark;
-}
-*/
-
 @-webkit-keyframes textfromleft {
   from {
     -webkit-transform: translatex(-250%);
@@ -30,7 +19,6 @@ $border-dark: rgba($base-color, 0.88);
             transform: translatex(100%);
   }
 }
-
 
 @-webkit-keyframes objectfromright {
   from {
@@ -79,7 +67,6 @@ $border-dark: rgba($base-color, 0.88);
     opacity: 1;
   }
 }
-
 
 @-webkit-keyframes fade-left {
   0% {
@@ -404,6 +391,24 @@ $border-dark: rgba($base-color, 0.88);
     background: $color;
 }
 */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.active.armrotate, #jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six, #sturtle__frontfoot--right,
+#sturtle__backfoot--right,
+#sturtle__frontfoot--left,
+#sturtle__backfoot--left, #sturtle__mouth {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
 /*
 %toolbelt {
   box-sizing: border-box;
@@ -424,24 +429,6 @@ $border-dark: rgba($base-color, 0.88);
   color: #cddc39;
 }
 */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.active.armrotate, #jellyfish__leg--two,
-#jellyfish__leg--four,
-#jellyfish__leg--six, #sturtle__frontfoot--right,
-#sturtle__backfoot--right,
-#sturtle__frontfoot--left,
-#sturtle__backfoot--left, #sturtle__mouth {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transform-box: fill-box;
-}
-
 body {
   background: linear-gradient(85deg, #C4ECF4, #EAECD2);
   height: auto;
@@ -591,6 +578,7 @@ section:nth-child(12) {
 }
 
 section:nth-child(12) .ocean__bottom--yellow {
+  width: 100vw;
   height: 10vh;
   background-color: rgba(162, 160, 143, 0.757);
   -webkit-transform: translatey(1000%);
@@ -634,75 +622,4 @@ section:nth-child(2) .text-box {
   -webkit-animation: fade-left 3s ease-in forwards;
           animation: fade-left 3s ease-in forwards;
 }
-
-/* kode for mathias - første av 4 sider (1/4) - work in progress */
-
-.test { /* temp - så jeg kan se <sections> */
-  border: solid;
-}
-
-.svg__fiskegarn {
-  transform: rotate(120deg);
-}
-
-.big__turtle {
-  transform: translateX(380%) translateY(60%);
-  animation-name: objectfromright;
-  animation-duration: 8s;
-}
-
-#bturtle__foot--leftback,
-#bturtle__foot--leftfront {
-  animation: movejellyfishlegs 3s infinite alternate;
-}
-
-#bturtle__foot--rightfront {
-  animation: movejellyfishlegsright 3s infinite alternate;
-}
-
-#bturtle__foot--rightback {
-  animation: movejellyfishlegsrightback 3s infinite alternate;
-}
-
-/* code for bottom page 4/4 - work in progress */
-
-.svg__colabox {
-  transform: translatex(150%) translatey(1450%);
-  margin: none;
-  padding: none;
-}
-
-.svg__colabox-2 {
-  transform: translatex(1140%) translatey(1480%);
-  margin: none;
-  padding: none;
-}
-
-.svg__straw {
-  transform: translatex(500%) translatey(510%) rotate(70deg);
-  margin: none;
-  padding: none;
-}
-
-.svg__straw-2 {
-  transform: translatex(4440%) translatey(510%) rotate(-73deg);
-  margin: none;
-  padding: none;
-}
-
-.svg__rock {
-  transform: translatex(210%) translatey(710%) rotate(10deg);
-  padding: none;
-  margin: none;
-}
-
-.svg__rope {
-  transform: translatex(80%) translatey(320%) rotate(-10deg);
-  padding: none;
-  margin: none;
-}
-
-/* need to add fish and fiskegarn */
-
-
 /*# sourceMappingURL=index.css.map */

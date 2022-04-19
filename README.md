@@ -15,6 +15,8 @@ Requests concerning the usage and/or execution of the project, can be directed t
 
 Within this project, we're using Visual Studio Code as the main technology for implementing the different development components. For reference, the HTML contains the structures of the page with SVGs. The SCSS (Sass) contains styling, compiled into CSS. Lastly, the JavaScript is applied for the purpose of using intersection observer for on-scroll animations to be put into effect.
 
+Credits for the intersection observer belongs to https://alvarotrigo.com/blog/css-animations-scroll/
+
 Figma is also used to create different SVGs, which are then optimized with https://jakearchibald.github.io/svgomg/?fbclid=IwAR22CPloKJh7A0mYnoJc87xIQNUlKg0j7keLeZKvM5M7ETaLGoat4jGC_jY (some of the SVG's are not optimized as it resulted in faulty rendering on the page).
 
 The project is maintained and contributed to by Marianne Mytting, Mille Dishington and Mathias Kvarsvik Kvalvåg.

@@ -630,6 +630,12 @@ section:nth-child(2) .text-box {
   position: relative;
 }
 
+.citations {
+  padding: 5%;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .reveal {
   position: relative;
   opacity: 0;

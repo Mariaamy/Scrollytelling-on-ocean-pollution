@@ -1,9 +1,3 @@
-
-@mixin font($family-value, $size-value) {
-    font-family: $family-value;
-    font-size: $size-value;
-  }
-
 @mixin wh($width, $height) {
     width: $width;
     height: $height;
@@ -14,11 +8,4 @@
     padding: $padding;
 }
 
-/*
-@mixin circle2 ($width,$height,$color) {
-    width: $width;
-    height: $height;
-    background: $color;
-}
-*/
 

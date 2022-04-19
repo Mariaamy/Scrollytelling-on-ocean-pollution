@@ -2,6 +2,10 @@
     @extend %reset;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 body {
     background: linear-gradient(85deg, $sky-blue, $sky-yellow);
     height: auto;
@@ -9,10 +13,20 @@ body {
 }
 
 .information__paragraph--introduction {
-  @include font(sans-serif, 3rem);
+  @include font(3rem, 700);
   margin-top: -15rem;
   animation: textfromleft 5s forwards ease-out;
   animation-iteration-count: 1;
+}
+
+.information__paragraph--introduction::before {
+    content: '';
+    position: absolute;
+    top: .25em;
+    left: -3.5em;
+    border: .5em solid transparent;
+    border-top-color: $heading;
+    animation: bounce 1s infinite alternate;
 }
 
 .active.armrotate {
@@ -127,15 +141,14 @@ section:nth-child(1) {
   }
 
   .text-box {
-    transform: translate(0%, 10%);
     color: $text-in-container;
-    @include font(sans-serif, larger);
+    @include font(1.5rem, 400);
     text-align: center;
   }
 
   section .text-container {
     display: flex;
-    @include mp(20px, 20px);
+    @include mp(10px, 35px);
     background: $container;
     transition: transform 1s;
   }
@@ -254,7 +267,8 @@ section:nth-child(1) {
     #sturtle__backfoot--left,
     #sturtle__mouth,
     section .text-container,
-    .active.fade-left
+    .active.fade-left,
+    .information__paragraph--introduction::before
      {
       animation: none;
       transition: none;

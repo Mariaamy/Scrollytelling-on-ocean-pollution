@@ -1,7 +1,12 @@
 @keyframes textfromleft {
     from {transform: translatex(-250%);}
-    to {transform: translatex(100%)};
+    to {transform: translatex(40%)};
   }
+
+@keyframes bounce {
+  from {transform: translatey(-10%);}
+  to {transform: translatey(60%);}
+}
 
 
 // @keyframes fade-bottom {
@@ -37,7 +42,7 @@
       opacity: 0;
     }
     100% {
-      transform: translateX(40%);
+      transform: translateX(20%);
       opacity: 1;
     }
   }
@@ -76,15 +81,15 @@
   @keyframes plasticbagpath {
     0% {
       opacity: 0%;
-      transform: translate(-30%, 30%) rotate(180deg);
+      transform: translate(-150%, 30%) rotate(180deg);
     }
     50% {
       opacity: 50%;
-      transform: translate(-150%, 225%);
+      transform: translate(-240%, 225%);
     }
     100% {
       opacity: 50%;
-      transform: translate(-165%, 225%);
+      transform: translate(-245%, 225%);
     }
   }
 

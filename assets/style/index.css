@@ -687,4 +687,60 @@ section:nth-child(2) .text-box {
             filter: brightness(1);
   }
 }
+
+/* kode for mathias */
+
+.test { /* border for å se mine seksjoner */
+  border: solid;
+}
+
+.information__paragraph--fngoal  /* need to add info */{
+  transform: translateX(550%) translateY(50%);
+}
+
+/* section 1 - mathias - animasjoner */
+
+.svg__fish--eye {
+  transform: translateX(440%) translateY(185%);
+  animation: fishstopper 5s infinite; /* må legge til animasjon  */
+}
+
+#fish__tail--bottom, #fish__tail--top {
+  transform: skew(-10deg);
+}
+
+.svg__fiskegarn {
+  animation: fiskegarnanimation 5s infinite; /* må legge til animasjon  */
+}
+
+/* havbunnen delen - plasseringer */
+
+.svg__colabox {
+  transform:translateX(210%) translateY(10%);
+}
+
+.svg__colabox-2 {
+  transform:translateX(1260%) translateY(10%);
+}
+
+.svg__rope {
+  transform: translateY(-60%) rotate(-20deg);
+}
+
+.svg__rock {
+  transform: translateX(110%) translateY(-40%);
+}
+
+.svg__straw {
+  transform: translateX(120%) translateY(-20%) rotate(-60deg);
+}
+
+.svg__straw-2 {
+  transform: translateX(4520%) translateY(-20%) rotate(50deg);
+}
+
+/* animation: objectfromright 10s infinite; */
+
+/* transform: translateX(120%) translateY(165%); fiske animasjon */
+
 /*# sourceMappingURL=index.css.map */

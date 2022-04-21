@@ -131,7 +131,7 @@ section:nth-child(1) {
   }
 
   section:nth-child(12) .ocean__bottom--yellow {
-    @include wh(100vw, 10vh);
+    @include wh(100vw, 100vh);
     background-color: $ocean-bottom;
     transform: translatey(1000%);
   }
@@ -275,6 +275,8 @@ section:nth-child(1) {
     section .text-container,
     .active.fade-left,
     .information__paragraph--introduction::before
+    .svg__fish--eye
+    .svg__fiskegarn
      {
       animation: none;
       transition: none;
@@ -293,6 +295,98 @@ section:nth-child(1) {
       filter: brightness(1);
     }
 }
+
+  /* kode for mathias */
+
+.test {
+  border: solid;
+}
+
+.information__paragraph--fngoal  /* need to add info */{
+  transform: translateX(550%) translateY(50%);
+}
+
+/* section 1 - mathias - animasjoner */
+
+.svg__fish--eye {
+  transform: translateX(440%) translateY(185%);
+  animation: fishstopper2 7s infinite; 
+}
+
+#fish__tail--bottom, #fish__tail--top {
+  transform: skew(-10deg);
+}
+
+.svg__fiskegarn {
+  animation: fiskegarnanimation 10s forwards infinite; 
+}
+
+/* havbunnen delen - plasseringer */
+
+.svg__colabox {
+  transform:translateX(210%) translateY(10%);
+}
+
+.svg__colabox-2 {
+  transform:translateX(1260%) translateY(10%);
+}
+
+.svg__rope {
+  transform: translateY(-60%) rotate(-20deg);
+}
+
+.svg__rock {
+  transform: translateX(110%) translateY(-40%);
+}
+
+.svg__straw {
+  transform: translateX(120%) translateY(-20%) rotate(-60deg);
+}
+
+.svg__straw-2 {
+  transform: translateX(4520%) translateY(-20%) rotate(50deg);
+}
+
+@keyframes fishstopper {
+  from {transform: translateX(440%) translateY(165%);}
+  to {transform: translateY(200%) translateX(-30%);}
+}
+
+@keyframes fishstopper2 {
+  0% { transform: translateX(440%) translateY(165%);}
+  50% { transform: translateY(200%) translateX(-30%);}
+  100% { transform: translateY(390%) translateX(-30%)}
+}
+
+@keyframes fiskegarnfalldown {
+  from {transform:translateX(65%) rotate(180deg)}
+  to {transform: translateX(65%) translateY(420%) rotate(180deg);}
   
+}
+
+.svg__fiskegarn--2 {
+  transform: translateX(65%) rotate(180deg);
+  animation: fiskegarnfalldown 10s infinite;
+}
+
+.information__paragraph--you { /* need to add text to index.html under this part! */ 
+  transform: translateX(780%) translateY(50%);
+}
   
+.svg__fish--bottom {
+  transform: translateX(10%);
+}
+
+.svg__fiskegarn--bottom {
+  transform: translateX(-110%) rotate(180deg);
+}
+
+.bottom__fish--stuck {
+  animation: fishstuckbottom 5s infinite;
+}
+
+@keyframes fishstuckbottom {  /* need to move the rocks and the other stuff that is located in the bottom section! */
+  from{transform:translateY(0%)}
+  to {transform:translateY(85%)}
+}
   

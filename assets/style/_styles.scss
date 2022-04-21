@@ -310,7 +310,7 @@ section:nth-child(1) {
 
 .svg__fish--eye {
   transform: translateX(440%) translateY(185%);
-  animation: fishstopper2 7s infinite; 
+  animation: fishstopper2 6s forwards; 
 }
 
 #fish__tail--bottom, #fish__tail--top {
@@ -321,31 +321,6 @@ section:nth-child(1) {
   animation: fiskegarnanimation 10s forwards infinite; 
 }
 
-/* havbunnen delen - plasseringer */
-
-.svg__colabox {
-  transform:translateX(210%) translateY(10%);
-}
-
-.svg__colabox-2 {
-  transform:translateX(1260%) translateY(10%);
-}
-
-.svg__rope {
-  transform: translateY(-60%) rotate(-20deg);
-}
-
-.svg__rock {
-  transform: translateX(110%) translateY(-40%);
-}
-
-.svg__straw {
-  transform: translateX(120%) translateY(-20%) rotate(-60deg);
-}
-
-.svg__straw-2 {
-  transform: translateX(4520%) translateY(-20%) rotate(50deg);
-}
 
 @keyframes fishstopper {
   from {transform: translateX(440%) translateY(165%);}
@@ -366,11 +341,12 @@ section:nth-child(1) {
 
 .svg__fiskegarn--2 {
   transform: translateX(65%) rotate(180deg);
-  animation: fiskegarnfalldown 10s infinite;
+  animation: fiskegarnfalldown 10s forwards;
+  z-index: 1;
 }
 
 .information__paragraph--you { /* need to add text to index.html under this part! */ 
-  transform: translateX(780%) translateY(50%);
+  transform: translateX(600%) translateY(30%);
 }
   
 .svg__fish--bottom {
@@ -382,11 +358,71 @@ section:nth-child(1) {
 }
 
 .bottom__fish--stuck {
-  animation: fishstuckbottom 5s infinite;
+  animation: fishstuckbottom 5s forwards; /* added forwards */
 }
 
 @keyframes fishstuckbottom {  /* need to move the rocks and the other stuff that is located in the bottom section! */
   from{transform:translateY(0%)}
   to {transform:translateY(85%)}
 }
+
+.svg__jellyfish--small {
+  transform: translateX(500%) translateY(320%);
+}
+
+.svg__jellyfish--small2 {
+  transform: translateX(200%) translateY(320%);
+}
+
+#sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
+  animation: movejellyfishlegs 5s alternate infinite;
+}
+
+.bubbles__bottom--one {
+  transform: translateX(-210%) translateY(50%);
+}
+
+.bubbles__bottom--two {
+  transform:translateY(80%);
+}
+
+.bubbles__bottom--three {
+  transform: translateY(60%) translateX(-260%);
+}
+
+/* havbunnen delen - plasseringer */
+
+.svg__colabox {
+  transform:translateX(80%) translateY(10%);
+  z-index: 1;
+}
+
+.svg__colabox-2 {
+  transform:translateX(1260%) translateY(10%);
+}
+
+.svg__rope {
+  transform: rotate(-20deg) translateX(230%);
+}
+
+.svg__rock {
+  transform: translateX(450%) translateY(-40%);
+}
+
+.svg__straw {
+  transform: translateX(90%) translateY(-20%) rotate(-60deg);
+}
+
+.svg__straw-2 {
+  transform: translateX(4520%) translateY(-20%) rotate(50deg);
+}
+
+.svg__plasticbag--bottom {
+  transform: translateX(380%) rotate(40deg) translateY(-30%);
+}
+
+.svg__bturtle--bottom {
+  transform: translateX(90%) translateY(-20%) rotate(-30deg);
+}
+
   

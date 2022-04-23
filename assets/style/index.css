@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes textfromleft {
   from {
     -webkit-transform: translatex(-250%);
@@ -9,6 +8,7 @@
             transform: translatex(40%);
   }
 }
+
 @keyframes textfromleft {
   from {
     -webkit-transform: translatex(-250%);
@@ -434,11 +434,12 @@ body {
   overflow-x: hidden;
 }
 
-.information__paragraph--introduction {
+.heading {
   font-family: rigid-square, sans-serif;
   font-style: normal;
   font-size: 3rem;
   font-weight: 700;
+  text-shadow: -1px 0 #8adee28e, 0 1px #8adee28e, 1px 0 #8adee28e, 0 -1px #8adee28e;
   margin-top: -15rem;
   -webkit-animation: textfromleft 5s forwards ease-out;
           animation: textfromleft 5s forwards ease-out;
@@ -446,7 +447,7 @@ body {
           animation-iteration-count: 1;
 }
 
-.information__paragraph--introduction::before {
+.heading::before {
   content: '';
   position: absolute;
   top: .25em;
@@ -588,11 +589,11 @@ section:nth-child(12) .ocean__bottom--yellow {
           transform: translatey(1000%);
 }
 
-section .container {
+section .text {
   margin: 100px;
 }
 
-.text-box {
+.text__box {
   color: #26999f;
   font-family: rigid-square, sans-serif;
   font-style: normal;
@@ -601,7 +602,7 @@ section .container {
   text-align: center;
 }
 
-section .text-container {
+section .text__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,17 +615,12 @@ section .text-container {
   transition: transform 1s, -webkit-transform 1s;
 }
 
-section .text-container:hover {
+section .text__container:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
-/*
-  Utkommentert kode er utkommentert fordi vi ikke
-  bruker det. Disse er ikke nødvendig med mindre vi finner ut
-  at vi vil ha et tekstfelt til etc. om ikke, kan de trygt slettes.
-  */
-section:nth-child(2) .text-box {
+section:nth-child(2) .text__box {
   width: 40vw;
   height: 50vh;
   position: relative;
@@ -669,7 +665,7 @@ section:nth-child(2) .text-box {
 }
 
 @media (prefers-reduced-motion) {
-  .information__paragraph--introduction,
+  .heading,
   .active.armrotate,
   .active.colapath,
   .active.plasticbagpath,
@@ -683,9 +679,9 @@ section:nth-child(2) .text-box {
   #sturtle__frontfoot--left,
   #sturtle__backfoot--left,
   #sturtle__mouth,
-  section .text-container,
+  section .text__container,
   .active.fade-left,
-  .information__paragraph--introduction::before {
+  .heading::before {
     -webkit-animation: none;
             animation: none;
     -webkit-transition: none;
@@ -706,60 +702,4 @@ section:nth-child(2) .text-box {
             filter: brightness(1);
   }
 }
-
-/* kode for mathias */
-
-.test { /* border for å se mine seksjoner */
-  border: solid;
-}
-
-.information__paragraph--fngoal  /* need to add info */{
-  transform: translateX(550%) translateY(50%);
-}
-
-/* section 1 - mathias - animasjoner */
-
-.svg__fish--eye {
-  transform: translateX(440%) translateY(185%);
-  animation: fishstopper 5s infinite; /* må legge til animasjon  */
-}
-
-#fish__tail--bottom, #fish__tail--top {
-  transform: skew(-10deg);
-}
-
-.svg__fiskegarn {
-  animation: fiskegarnanimation 5s infinite; /* må legge til animasjon  */
-}
-
-/* havbunnen delen - plasseringer */
-
-.svg__colabox {
-  transform:translateX(210%) translateY(10%);
-}
-
-.svg__colabox-2 {
-  transform:translateX(1260%) translateY(10%);
-}
-
-.svg__rope {
-  transform: translateY(-60%) rotate(-20deg);
-}
-
-.svg__rock {
-  transform: translateX(110%) translateY(-40%);
-}
-
-.svg__straw {
-  transform: translateX(120%) translateY(-20%) rotate(-60deg);
-}
-
-.svg__straw-2 {
-  transform: translateX(4520%) translateY(-20%) rotate(50deg);
-}
-
-/* animation: objectfromright 10s infinite; */
-
-/* transform: translateX(120%) translateY(165%); fiske animasjon */
-
 /*# sourceMappingURL=index.css.map */

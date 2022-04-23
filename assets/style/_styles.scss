@@ -176,7 +176,7 @@ section:nth-child(1) {
 
   
   section .text__container:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 
   
@@ -184,6 +184,23 @@ section:nth-child(1) {
     @include wh(40vw, 50vh);
     position: relative;
   }
+
+  .information__paragraph--fngoal {
+    @include wh(60rem, 65vh);
+    color: darken($text-in-container, 10%);
+    transform: translateX(20%) translateY(0%);
+
+  }
+
+
+  
+  .information__paragraph--you {
+    background-color: $container;
+    padding: 1.5rem;
+    @include wh(35vw, 55vh);
+    color: darken($text-in-container, 20%);
+  }
+
   
 
   .citations {
@@ -269,11 +286,8 @@ section:nth-child(1) {
   border: solid;
 }
 
-.information__paragraph--fngoal { // added info - need more?
-  transform: translateX(140%) translateY(50%);
-  width: 60rem;
-  font-size: 1.3rem;
-}
+
+
 
 // section 1 - mathias - animasjoner
 

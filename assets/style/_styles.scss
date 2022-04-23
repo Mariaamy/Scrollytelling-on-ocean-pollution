@@ -1,5 +1,5 @@
 * {
-    @extend %reset;
+  @extend %reset;
 }
 
 abbr {
@@ -7,9 +7,9 @@ abbr {
 }
 
 body {
-    background: linear-gradient(85deg, $sky-blue, $sky-yellow);
-    height: auto;
-    overflow-x: hidden;
+  background: linear-gradient(85deg, $sky-blue, $sky-yellow);
+  height: auto;
+  overflow-x: hidden;
 }
 
 //Triangle credits: Kevin Powell's youtube video: https://www.youtube.com/watch?v=fFJH6dguuqo&t=681s
@@ -24,15 +24,14 @@ body {
 }
 
 .heading::before {
-    content: '';
-    position: absolute;
-    top: .25em;
-    left: -3.5em;
-    border: .5em solid transparent;
-    border-top-color: $heading;
-    animation: bounce 1s infinite alternate;
+  content: '';
+  position: absolute;
+  top: .25em;
+  left: -3.5em;
+  border: .5em solid transparent;
+  border-top-color: $heading;
+  animation: bounce 1s infinite alternate;
 }
-
 
 .active.colapath {
   animation: colapath 15s forwards ease-out;
@@ -44,6 +43,22 @@ body {
   animation: bottlepath 20s forwards linear;
 }
 
+.active.plasticbagpath {
+  animation: plasticbagpath 15s forwards ease-in-out;
+  opacity: 0%;
+  z-index: 2;
+}
+
+.active.movesmallturtle {
+  transform: translate(-50%, 150%);
+  animation: movesmallturtle 6s 1.5s forwards;
+}
+
+.jellyfish {
+  opacity: 50%;
+  animation: movejellyfish 5s infinite forwards;
+}
+
 .active.fishpath {
   transform: translateX(10%) translatey(-10%);
   animation: fishpath 20s forwards;
@@ -51,12 +66,6 @@ body {
 
 #fish__fin--side {
   animation: fishfinside 1s infinite alternate;
-}
-
-.active.plasticbagpath {
-  animation: plasticbagpath 15s forwards ease-in-out;
-  opacity: 0%;
-  z-index: 2;
 }
 
 #sturtle__frontfoot--right,
@@ -73,19 +82,9 @@ body {
 #jellyfish__leg--two,
 #jellyfish__leg--four,
 #jellyfish__leg--six {
-    animation: movejellyfishlegs 3s infinite alternate;
+  animation: movejellyfishlegs 3s infinite alternate;
 }
 
-.jellyfish {
-    opacity: 50%;
-    animation: movejellyfish 5s infinite forwards;
-}
-
-
-.active.movesmallturtle {
-  transform: translate(-50%, 150%);
-  animation: movesmallturtle 6s 1.5s forwards;
-}
 
 #sturtle__frontfoot--right,
 #sturtle__backfoot--right,
@@ -100,220 +99,161 @@ body {
 }
 
 section {
-    min-height: 100vh;
-    display: flex;
+  min-height: 100vh;
+  display: flex;
 }
 
 section:nth-child(1) {
-    background: linear-gradient(180deg, $water1, $water2);
-    margin-top: 30em;
-    color: $heading;
-  }
-  section:nth-child(2) {
-    background: linear-gradient(180deg, $water2, $water3);
-  }
-  section:nth-child(3) {
-    background: linear-gradient(180deg, $water3, $water4);
-  }
-  section:nth-child(4) {
-    background: linear-gradient(180deg, $water4,  $water5);
-  }
-
-  section:nth-child(5) {
-    background: linear-gradient(180deg, $water5, $water6);
-  }
-
-  section:nth-child(6) {
-    background: linear-gradient(180deg,  $water6, $water7);
-  }
-
-  section:nth-child(7) {
-    background: linear-gradient(180deg, $water7, $water8);
-  }
-
-  section:nth-child(8) {
-    background: linear-gradient(180deg, $water8,  $water9);
-  }
-
-  section:nth-child(9) {
-    background: linear-gradient(180deg,  $water9, $water10);
-  }
-
-  section:nth-child(10) {
-    background: linear-gradient(180deg, $water10, $water11);
-  }
-
-  section:nth-child(11) {
-    background: linear-gradient(180deg, $water11, $water12);
-  }
-
-  section:nth-child(12) {
-    background: linear-gradient(180deg, $water12, $water13);
-  }
-
-  section:nth-child(12) .ocean__bottom--yellow {
-    @include wh(100vw, 100vh);
-    background-color: $ocean-bottom;
-    transform: translatey(1000%);
-  }
-
-  section .text {
-    margin: 100px;
-  }
-
-  .text__box {
-    color: $text-in-container;
-    // @include font(1.5rem, 400);
-    text-align: center;
-  }
-
-  section .text__container {
-    display: flex;
-    @include mp(10px, 35px);
-    background: $container;
-    transition: transform 1s;
-  }
-
+  background: linear-gradient(180deg, $water1, $water2);
+  margin-top: 30em;
+  color: $heading;
+}
   
-  section .text__container:hover {
-    transform: scale(1.1);
-  }
-
-  
-  section:nth-child(2) .text__box {
-    @include wh(40vw, 50vh);
-    position: relative;
-  }
-
-  .information__paragraph--fngoal {
-    @include wh(60rem, 45vh);
-    color: darken($text-in-container, 10%);
-    transform: translateX(0%) translateY(0%);
-    // @include font(1.5rem, 400);
-    margin: auto !important;
-  }
-
-
-  
-  .information__paragraph--you {
-    background-color: $container;
-    padding: 1.5rem;
-    @include wh(35vw, 55vh);
-    color: darken($text-in-container, 15%);
-    @include font(1.2rem, 400);
-    margin: auto;
-  }
-
-  .citations,
-  .information__paragraph--fngoal,
-  .text__box {
-    @include font(1.5rem, 400);
-  }
-  
-
-  .citations {
-    padding: 5%;
-    width: 70%;
-    margin: 0 auto;
-    // @include font(1.5rem, 400);
-  }
-  
-  .reveal {
-    position: relative;
-    opacity: 0;
-  }
-  
-  .reveal.active {
-    opacity: 1;
-  }
-  
-  .active.fade-left {
-    animation: fade-left 3s ease-in forwards;
-  }
-
-
-  @media (orientation: landscape) {
-    body {
-      flex-direction: row;
-    }
-  }
-  
-  @media (orientation: portrait) {
-    body {
-      flex-direction: column;
-    }
-  }
-
-  
-  @media (prefers-reduced-motion) {
-    .heading,
-    .active.armrotate,
-    .active.colapath,
-    .active.plasticbagpath,
-    #jellyfish__leg--two,
-    #jellyfish__leg--four,
-    #jellyfish__leg--six,
-    .jellyfish,
-    .active.movesmallturtle,
-    #sturtle__frontfoot--right,
-    #sturtle__backfoot--right,
-    #sturtle__frontfoot--left,
-    #sturtle__backfoot--left,
-    #sturtle__mouth,
-    section .text__container,
-    .active.fade-left,
-    .heading::before,
-    .svg__fish--eye,
-    .svg__fiskegarn,
-    .active.bottlepath
-     {
-      animation: none;
-      transition: none;
-    } 
-  }
-  
-
-  @media (prefers-color-scheme: dark) {
-    html {
-      filter: brightness(.8);
-    }
-  } 
-  
-  @media (prefers-color-scheme: light) {
-    html {
-      filter: brightness(1);
-    }
+section:nth-child(2) {
+  background: linear-gradient(180deg, $water2, $water3);
 }
 
+section:nth-child(3) {
+  background: linear-gradient(180deg, $water3, $water4);
+}
+  
+section:nth-child(4) {
+  background: linear-gradient(180deg, $water4,  $water5);
+}
 
+section:nth-child(5) {
+  background: linear-gradient(180deg, $water5, $water6);
+}
 
+section:nth-child(6) {
+  background: linear-gradient(180deg,  $water6, $water7);
+}
 
+section:nth-child(7) {
+  background: linear-gradient(180deg, $water7, $water8);
+}
 
-    // kode for mathias
+section:nth-child(8) {
+  background: linear-gradient(180deg, $water8,  $water9);
+}
 
-// section 1 - mathias - animasjoner
+section:nth-child(9) {
+  background: linear-gradient(180deg,  $water9, $water10);
+}
 
-.active.fiskegarnanimation { // første fiskegarn animasjonen
-  animation: fiskegarnanimation 10s forwards; // animasjonen ligger i _keyframes.scss
+section:nth-child(10) {
+  background: linear-gradient(180deg, $water10, $water11);
+}
+
+section:nth-child(11) {
+  background: linear-gradient(180deg, $water11, $water12);
+}
+
+section:nth-child(12) {
+  background: linear-gradient(180deg, $water12, $water13);
+}
+
+section:nth-child(12) .ocean__bottom--yellow {
+  @include wh(100vw, 100vh);
+  background-color: $ocean-bottom;
+  transform: translatey(1000%);
+}
+
+section .text {
+  margin: 100px;
+}
+
+.text__box {
+  color: $text-in-container;
+  text-align: center;
+}
+
+section .text__container {
+  display: flex;
+  @include mp(10px, 35px);
+  background: $container;
+  transition: transform 1s;
+}
+
+  
+section .text__container:nth-child(1):hover {
+  transform: scale(1.2) translateX(8%);
+}
+
+section .text__container:nth-child(3):hover {
+  transform: scale(1.1) translatex(-10%) translatey(70%);
+}
+  
+section:nth-child(2) .text__box {
+  @include wh(40vw, 50vh);
+  position: relative;
+}
+
+.information__paragraph--fngoal {
+  @include wh(60rem, 50vh);
+  color: darken($text-in-container, 10%);
+  transform: translateX(10%);
+  position: relative;
+  bottom: 100vh;
+  margin: auto !important;
+}
+
+.information__paragraph--you {
+  opacity: 90%;
+  background-color: $container;
+  padding: 1.5rem;
+  @include wh(70rem, 50vh);
+  transform: translatex(-10%) translatey(70%);
+  color: darken($text-in-container, 15%);
+  @include font(1.2rem, 400);
+  margin: auto;
+}
+
+.citations,
+.information__paragraph--fngoal,
+.text__box {
+  @include font(1.5rem, 400);
+}
+  
+
+.citations {
+  padding: 5%;
+  width: 70%;
+  margin: 0 auto;
+}
+  
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+  
+.reveal.active {
+  opacity: 1;
+}
+  
+.active.fade-left {
+  animation: fade-left 3s ease-in forwards;
+}
+
+.active.fiskegarnanimation { 
+  animation: fiskegarnanimation 5s forwards; 
 }
 
 .active.fiskegarnfalldown {
   transform: translateX(65%) rotate(180deg);
   z-index: 1;
-  animation: fiskegarnfalldown 10s forwards;
+  opacity: 0;
+  animation: fiskegarnfalldown 10s 1s forwards;
 }
 
 .active.fishstopper {
-  transform: translateX(440%) translateY(185%); //440 translateX - translateY (885) -- translateX (-20%) animasjon på bunnen
-  animation: fishstopper 10s forwards; 
+  transform: translateX(440%) translateY(185%);
+  animation: fishstopper 10s 1s forwards; 
 }
 
-#fish__tail--top, #fish__tail--bottom { // targeter finnene til fisken
+#fish__tail--top, #fish__tail--bottom { 
   animation: fiskefinnerbevegelse 2s infinite alternate;
 }
-
-// 3rd section - mathias
-
 
 li {
   margin: 5px;
@@ -327,12 +267,18 @@ li {
   transform: translateX(900%) translateY(70%);
 }
 
-#sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
-  animation: movejellyfishlegs 5s alternate infinite;
+.svg__jellyfish--small,
+.svg__jellyfish--small2 {
+  opacity: 90%;
 }
 
-
-// havbunnen delen - plasseringer
+#sjellyfish__leg--five,
+#sjellyfish__leg--four,
+#sjellyfish__leg--one,
+#sjellyfish__leg--two,
+#sjellyfish__leg--three {
+  animation: movejellyfishlegs 5s alternate infinite;
+}
 
 .svg__colabox {
   transform:translateX(50%) translateY(10%);
@@ -367,6 +313,62 @@ li {
   transform: translateX(30%) translateY(-20%) rotate(-30deg);
 }
 
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
 
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .heading,
+  .active.armrotate,
+  .active.colapath,
+  .active.plasticbagpath,
+  #jellyfish__leg--two,
+  #jellyfish__leg--four,
+  #jellyfish__leg--six,
+  .jellyfish,
+  .active.movesmallturtle,
+  #sturtle__frontfoot--right,
+  #sturtle__backfoot--right,
+  #sturtle__frontfoot--left,
+  #sturtle__backfoot--left,
+  #sturtle__mouth,
+  section .text__container,
+  .active.fade-left,
+  .heading::before,
+  .svg__fish--eye,
+  .svg__fiskegarn,
+  .active.bottlepath,
+  section .text__container:nth-child(3):hover,
+  section .text__container:nth-child(1):hover,
+  .active.fishpath,
+  #sjellyfish__leg--five,
+  #sjellyfish__leg--four,
+  #sjellyfish__leg--one,
+  #sjellyfish__leg--two,
+  #sjellyfish__leg--three {
+    animation: none;
+    transition: none;
+  } 
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    filter: brightness(.8);
+  }
+} 
+
+@media (prefers-color-scheme: light) {
+  html {
+    filter: brightness(1);
+  }
+}
 
   

@@ -1,13 +1,12 @@
 @keyframes textfromleft {
-    from {transform: translatex(-250%);}
-    to {transform: translatex(40%)};
-  }
+  from {transform: translatex(-250%);}
+  to {transform: translatex(40%)};
+}
 
 @keyframes bounce {
   from {transform: translatey(-10%);}
   to {transform: translatey(60%);}
 }
-
 
 @keyframes objectfromright {
   from {transform: translatex(410%) translateY(60%)}
@@ -15,109 +14,111 @@
 }
 
 @keyframes fade-bottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
   }
-
-  @keyframes fade-left {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(20%);
-      opacity: 1;
-    }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-  @keyframes colapath {
-    0% {
-      transform: translateY(-100%) translatex(-150%) scale(30%);
-    }
-    25% {
-      transform: translateY(-125%) translatex(-300%) scale(50%);
-    }
-    50% {
-      transform: translateY(-100%) translatex(-330%) scale(70%);
-    }
-    75% {
-      transform: translateY(0%) translatex(-250%) scale(90%);
-      opacity: 50%;
-    }
-    100% {
-      transform: translateY(30%) translatex(-200%) scale(100%);
-      opacity: 0%
-    }
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-
-  @keyframes bottlepath {
-    0% {
-      opacity: 0%;
-      transform: translate(220%, -110%) rotate(30deg);
-    }
-    50% {
-      opacity: 80%;
-      transform: translate(220%, 100%) rotate(-20deg);
-    }
-    100% {
-      opacity: 0%;
-      transform: translate(220%, 125%) rotate(-20deg);
-    }
+  100% {
+    transform: translateX(20%);
+    opacity: 1;
   }
+}
 
-  @keyframes fishpath {
-    0% {
-      margin-left: 90%;
-    }
-    100% {
-      margin-left: -110%;
-    }
+@keyframes colapath {
+  0% {
+    transform: translateY(-100%) translatex(-150%) scale(30%);
   }
-
-  @keyframes fishfinside {
-    50% {
-      transform: rotate(5deg);
-    }
-    100% {
-      transform: rotate(5deg);
-    }
+  25% {
+    transform: translateY(-125%) translatex(-300%) scale(50%);
   }
-
-  @keyframes plasticbagpath {
-    0% {
-      opacity: 0%;
-      transform: translate(-150%, 30%) rotate(180deg);
-    }
-    50% {
-      opacity: 50%;
-      transform: translate(-240%, 225%);
-    }
-    100% {
-      opacity: 50%;
-      transform: translate(-245%, 225%);
-    }
+  50% {
+    transform: translateY(-100%) translatex(-330%) scale(70%);
   }
-
-  @keyframes movesmallturtle {
-    50% {transform: translatex(0%, 100%) rotate(0deg); }
-    50% {transform: translatex(-50%, 150%) rotate(90deg); }
-  
-    75% {transform: translate(-40%, 200%) rotate(180deg);
-    z-index: 1};
-    100% {transform: translate(-50%, 297%) rotate(215deg);
-      z-index: 1};
+  75% {
+    transform: translateY(0%) translatex(-250%) scale(90%);
+    opacity: 50%;
   }
+  100% {
+    transform: translateY(30%) translatex(-200%) scale(100%);
+    opacity: 0%
+  }
+}
 
+@keyframes bottlepath {
+  0% {
+    opacity: 0%;
+    transform: translate(220%, -110%) rotate(30deg);
+  }
+  50% {
+    opacity: 80%;
+    transform: translate(220%, 100%) rotate(-20deg);
+  }
+  100% {
+    opacity: 0%;
+    transform: translate(220%, 125%) rotate(-20deg);
+  }
+}
 
-  @keyframes movejellyfishlegs {
-    from {transform: rotatez(-5deg);}
-    to {transform: rotatez(5deg);}
+@keyframes fishpath {
+  0% {
+    margin-left: 90%;
+  }
+  100% {
+    margin-left: -110%;
+  }
+}
+
+@keyframes fishfinside {
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes plasticbagpath {
+  0% {
+    opacity: 0%;
+    transform: translate(-150%, 30%) rotate(180deg);
+  }
+  50% {
+    opacity: 50%;
+    transform: translate(-240%, 225%);
+  }
+  100% {
+    opacity: 50%;
+    transform: translate(-245%, 225%);
+  }
+}
+
+@keyframes movesmallturtle {
+  0% {transform: translatex(0%, 100%) rotate(0deg);}
+  50% {transform: translatex(-50%, 150%) rotate(90deg);}
+  75% { 
+    transform: translate(-40%, 200%) rotate(180deg);
+    z-index: 1;
+  }
+  100% {
+    transform: translate(-50%, 297%) rotate(215deg);
+    z-index: 1;
+  }
+}
+
+@keyframes movejellyfishlegs {
+  from {transform: rotatez(-5deg);}
+  to {transform: rotatez(5deg);}
 }
 
 @keyframes movejellyfishlegsright {
@@ -148,25 +149,35 @@ to {transform: rotate(-30deg);}
 
 @keyframes fiskegarnanimation {
   0% { transform:translateY(20%) translateX(0%);}
-  50% {transform:translateY(280%) translateX(-515%) rotate(180deg);}
+  50% {transform:translateY(340%) translateX(-455%) rotate(180deg);}
   100% {
-    transform: translateY(280%) translateX(-515%) rotate(180deg);
-    opacity: 0;}
+    transform: translateY(340%) translateX(-455%) rotate(180deg);
+    opacity: 0;
+  }
 }
 
 @keyframes fiskefinnerbevegelse {
   from {transform: skew(5deg);}
-  to {transform:skew(-5deg)}
+  to {transform:skew(-5deg);}
 }
 
 @keyframes fiskegarnfalldown {
-  0% { transform: translateX(65%) rotate(180deg);}
-  50% { transform: translateY(180%) translateX(65%)  rotate(180deg);}
-  100% { transform: translateY(650%) translateX(65%) rotate(180deg);}
+  0% {
+    opacity: 0;
+    transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    opacity: .5;
+    transform: translateY(180%) translateX(65%)  rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(650%) translateX(65%) rotate(180deg);
+  }
 } 
 
  @keyframes fishstopper {
-  0% { transform: translateX(440%) translateY(165%);}
-  50% { transform: translateY(350%) translateX(-20%)}
-  100% { transform: translateY(1055%) translateX(-20%)}
+  0% {transform: translateX(440%) translateY(165%);}
+  50% {transform: translateY(350%) translateX(-20%)}
+  100% {transform: translateY(1055%) translateX(-20%)}
 } 

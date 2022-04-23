@@ -12,14 +12,18 @@ body {
     overflow-x: hidden;
 }
 
-.information__paragraph--introduction {
+//Triangle credits: Kevin Powell's youtube video: https://www.youtube.com/watch?v=fFJH6dguuqo&t=681s
+
+.heading {
   @include font(3rem, 700);
+  text-shadow: -1px 0 $container, 0 1px $container, 1px 0 $container, 0 -1px $container;
+  // inspiration for the text border is from the following stackoverflow thread: https://stackoverflow.com/questions/2570972/css-font-border
   margin-top: -15rem;
   animation: textfromleft 5s forwards ease-out;
   animation-iteration-count: 1;
 }
 
-.information__paragraph--introduction::before {
+.heading::before {
     content: '';
     position: absolute;
     top: .25em;
@@ -29,11 +33,6 @@ body {
     animation: bounce 1s infinite alternate;
 }
 
-.active.armrotate {
-  @extend %transform;
-  transform: translatey(-100%) translatex(785%);
-  animation: armrotate 3s forwards ease-out;
-}
 
 .active.colapath {
   animation: colapath 15s forwards ease-out;
@@ -60,10 +59,20 @@ body {
   z-index: 2;
 }
 
+#sturtle__frontfoot--right,
+#sturtle__backfoot--right,
+#sturtle__frontfoot--left,
+#sturtle__backfoot--left,
+#sturtle__mouth,
 #jellyfish__leg--two,
 #jellyfish__leg--four,
 #jellyfish__leg--six {
-    @extend %transform;
+  @extend %transform;
+}
+
+#jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six {
     animation: movejellyfishlegs 3s infinite alternate;
 }
 
@@ -82,12 +91,11 @@ body {
 #sturtle__backfoot--right,
 #sturtle__frontfoot--left,
 #sturtle__backfoot--left {
-  @extend %transform;
   animation: turtlefeet 2s infinite alternate linear;
 }
 
+
 #sturtle__mouth {
-  @extend %transform;
   animation: turtlemouth 1s ease-out infinite alternate;
 }
 
@@ -144,22 +152,22 @@ section:nth-child(1) {
   }
 
   section:nth-child(12) .ocean__bottom--yellow {
-    @include wh(100vw, 10vh);
+    @include wh(100vw, 100vh);
     background-color: $ocean-bottom;
     transform: translatey(1000%);
   }
 
-  section .container {
+  section .text {
     margin: 100px;
   }
 
-  .text-box {
+  .text__box {
     color: $text-in-container;
     @include font(1.5rem, 400);
     text-align: center;
   }
 
-  section .text-container {
+  section .text__container {
     display: flex;
     @include mp(10px, 35px);
     background: $container;
@@ -167,35 +175,12 @@ section:nth-child(1) {
   }
 
   
-  section .text-container:hover {
+  section .text__container:hover {
     transform: scale(1.3);
   }
 
-
-  /*
-  Utkommentert kode er utkommentert fordi vi ikke
-  bruker det. Disse er ikke nødvendig med mindre vi finner ut
-  at vi vil ha et tekstfelt til etc. om ikke, kan de trygt slettes.
-  */
-
-
-  // section h3 {
-  //   font-size: 30px;
-  //   margin-top: 200px;
-  //   padding-right: 10px;
-  //   text-align: center;
-  //   justify-content: center;
-  //   text-transform: uppercase;
-  //   margin-bottom: 10px;
-  // }
-
-  // section:nth-child(1) .text-box {
-  //   width: 40vw;
-  //   height: 50vh;
-  //   position: relative;
-  // }
   
-  section:nth-child(2) .text-box {
+  section:nth-child(2) .text__box {
     @include wh(40vw, 50vh);
     position: relative;
   }
@@ -206,37 +191,6 @@ section:nth-child(1) {
     width: 50%;
     margin: 0 auto;
   }
-  // section:nth-child(3) .text-box {
-  //   width: 70vw;
-  //   height: 70vh;
-  //   position: relative;
-  //   display: none;
-  // }
-  
-  // section:nth-child(4) .text-box {
-  //   width: 20vw;
-  //   height: 20vh;
-  //   position: relative;
-  // }
- 
-  
-  // section:nth-child(4) {
-  //   transform: scale(250%);
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 60%;
-  // }
-  
-  // section:nth-child(4) {
-  //   transform: scale(250%);
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 45%;
-  // }
-  
-  // section:nth-child(5) {
-  //   background-color: lightblue;
-  // }
   
   .reveal {
     position: relative;
@@ -246,15 +200,10 @@ section:nth-child(1) {
   .reveal.active {
     opacity: 1;
   }
-  // .active.fade-bottom {
-  //   animation: fade-bottom 1.5s ease-in;
-  // }
+  
   .active.fade-left {
     animation: fade-left 3s ease-in forwards;
   }
-  // .active.fade-right {
-  //   animation: fade-right 1.5s ease-in;
-  // }
 
 
   @media (orientation: landscape) {
@@ -271,7 +220,7 @@ section:nth-child(1) {
 
   
   @media (prefers-reduced-motion) {
-    .information__paragraph--introduction,
+    .heading,
     .active.armrotate,
     .active.colapath,
     .active.plasticbagpath,
@@ -285,9 +234,11 @@ section:nth-child(1) {
     #sturtle__frontfoot--left,
     #sturtle__backfoot--left,
     #sturtle__mouth,
-    section .text-container,
+    section .text__container,
     .active.fade-left,
-    .information__paragraph--introduction::before,
+    .heading::before,
+    .svg__fish--eye,
+    .svg__fiskegarn,
     .active.bottlepath
      {
       animation: none;
@@ -307,6 +258,134 @@ section:nth-child(1) {
       filter: brightness(1);
     }
 }
-  
-  
+
+
+
+
+
+// kode for mathias
+
+.test {
+  border: solid;
+}
+
+.information__paragraph--fngoal { // added info - need more?
+  transform: translateX(140%) translateY(50%);
+  width: 60rem;
+  font-size: 1.3rem;
+}
+
+// section 1 - mathias - animasjoner
+
+.svg__fiskegarn { // første fiskegarn animasjonen
+  animation: fiskegarnanimation 10s forwards; // animasjonen ligger i _keyframes.scss
+}
+
+.svg__fiskegarn--2 {
+  transform: translateX(65%) rotate(180deg);
+  z-index: 1;
+  animation: fiskegarnfalldown 10s forwards;
+}
+
+@keyframes fishstopper { // need to move the animations to _keyframes.scss og legge til .action."animation-name" (?)
+  0% { transform: translateX(440%) translateY(165%);}
+  50% { transform: translateY(200%) translateX(-20%)}
+  100% { transform: translateY(885%) translateX(-20%)}
+}
+
+.svg__fish--eye {
+  transform: translateX(440%) translateY(185%); //440 translateX - translateY (885) -- translateX (-20%) animasjon på bunnen
+  animation: fishstopper 10s forwards; 
+}
+
+@keyframes fiskegarnfalldown { // need to move the animations to _keyframes.scss og legge til .action."animation-name" (?)
+  0% { transform: translateX(65%) rotate(180deg);}
+  50% { transform: translateY(180%) translateX(65%)  rotate(180deg);}
+  100% { transform: translateY(950%) translateX(65%) rotate(180deg);}
+} 
+
+@keyframes fiskefinnerbevegelse { // fiske finne animation
+  from {transform: skew(5deg);}
+  to {transform:skew(-5deg)}
+}
+
+#fish__tail--top, #fish__tail--bottom { // targeter finnene til fisken
+  animation: fiskefinnerbevegelse 2s infinite alternate;
+}
+
+// 3rd section - mathias
+
+.information__paragraph--you { // added info - need more points!?
+  transform: translateX(70%) translateY(40%);
+  font-size: 1.2rem;
+}
+
+li {
+  margin: 5px;
+}
+
+.svg__jellyfish--small {
+  transform: translateX(900%) translateY(320%);
+}
+
+.svg__jellyfish--small2 {
+  transform: translateX(1100%) translateY(320%);
+}
+
+#sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
+  animation: movejellyfishlegs 5s alternate infinite;
+}
+
+
+// extra - get bubbles to work - but they make the page move a bit to left/right
+
+.bubbles__bottom--one { 
+  transform: translateX(-210%) translateY(50%);
+}
+
+.bubbles__bottom--two {
+  transform:translateY(80%);
+}
+
+.bubbles__bottom--three {
+  transform: translateY(60%) translateX(-260%);
+}
+
+// havbunnen delen - plasseringer
+
+.svg__colabox {
+  transform:translateX(80%) translateY(10%);
+  z-index: 1;
+}
+
+.svg__colabox-2 {
+  transform:translateX(1260%) translateY(10%);
+}
+
+.svg__rope {
+  transform: rotate(-20deg) translateX(230%);
+}
+
+.svg__rock {
+  transform: translateX(450%) translateY(-40%);
+}
+
+.svg__straw {
+  transform: translateX(90%) translateY(-20%) rotate(-60deg);
+}
+
+.svg__straw-2 {
+  transform: translateX(4520%) translateY(-20%) rotate(50deg);
+}
+
+.svg__plasticbag--bottom {
+  transform: translateX(380%) rotate(40deg) translateY(-30%);
+}
+
+.svg__bturtle--bottom {
+  transform: translateX(90%) translateY(-20%) rotate(-30deg);
+}
+
+
+
   

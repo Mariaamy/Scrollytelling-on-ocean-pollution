@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+//credits for transform origin & fill-box to animate the svgs: Dev Ed https://www.youtube.com/watch?v=gWai7fYp9PY&t=735s
+
 %transform {
     transform-origin: center;
     transform-box: fill-box;

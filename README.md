@@ -2,7 +2,7 @@
 
 IDG1293 Assignment 3
 
-The project consists of a scrollytelling story, which portraits ocean life and how it is affeced by pollution in regards to United Nations sustainable developmental goals number 14.
+The project consists of a scrollytelling story, which portraits ocean life and how it is affeced by pollution in regards to United Nations sustainable developmental goal number 14.
 
 The project is useful as it aims to spread awareness around plastic polution and what it does to the enviroment, especially the ocean.
 
@@ -18,5 +18,7 @@ Within this project, we're using Visual Studio Code as the main technology for i
 Credits for the intersection observer belongs to https://alvarotrigo.com/blog/css-animations-scroll/
 
 Figma is also used to create different SVGs, which are then optimized with https://jakearchibald.github.io/svgomg/?fbclid=IwAR22CPloKJh7A0mYnoJc87xIQNUlKg0j7keLeZKvM5M7ETaLGoat4jGC_jY (some of the SVG's are not optimized as it resulted in faulty rendering on the page).
+
+Link to figma design file: https://www.figma.com/file/zJwIfBCNqttIpMIYPfmxpM/Untitled?node-id=0%3A1
 
 The project is maintained and contributed to by Marianne Mytting, Mille Dishington and Mathias Kvarsvik Kvalvåg.

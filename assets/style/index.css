@@ -279,7 +279,7 @@
 }
 
 @-webkit-keyframes movesmallturtle {
-  50% {
+  0% {
     -webkit-transform: translatex(0%, 100%) rotate(0deg);
             transform: translatex(0%, 100%) rotate(0deg);
   }
@@ -300,7 +300,7 @@
 }
 
 @keyframes movesmallturtle {
-  50% {
+  0% {
     -webkit-transform: translatex(0%, 100%) rotate(0deg);
             transform: translatex(0%, 100%) rotate(0deg);
   }
@@ -466,12 +466,12 @@
             transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
-            transform: translateY(280%) translateX(-515%) rotate(180deg);
+    -webkit-transform: translateY(340%) translateX(-455%) rotate(180deg);
+            transform: translateY(340%) translateX(-455%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
-            transform: translateY(280%) translateX(-515%) rotate(180deg);
+    -webkit-transform: translateY(340%) translateX(-455%) rotate(180deg);
+            transform: translateY(340%) translateX(-455%) rotate(180deg);
     opacity: 0;
   }
 }
@@ -482,12 +482,12 @@
             transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
-            transform: translateY(280%) translateX(-515%) rotate(180deg);
+    -webkit-transform: translateY(340%) translateX(-455%) rotate(180deg);
+            transform: translateY(340%) translateX(-455%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
-            transform: translateY(280%) translateX(-515%) rotate(180deg);
+    -webkit-transform: translateY(340%) translateX(-455%) rotate(180deg);
+            transform: translateY(340%) translateX(-455%) rotate(180deg);
     opacity: 0;
   }
 }
@@ -516,14 +516,17 @@
 
 @-webkit-keyframes fiskegarnfalldown {
   0% {
+    opacity: 0;
     -webkit-transform: translateX(65%) rotate(180deg);
             transform: translateX(65%) rotate(180deg);
   }
   50% {
+    opacity: .5;
     -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
             transform: translateY(180%) translateX(65%) rotate(180deg);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translateY(650%) translateX(65%) rotate(180deg);
             transform: translateY(650%) translateX(65%) rotate(180deg);
   }
@@ -531,14 +534,17 @@
 
 @keyframes fiskegarnfalldown {
   0% {
+    opacity: 0;
     -webkit-transform: translateX(65%) rotate(180deg);
             transform: translateX(65%) rotate(180deg);
   }
   50% {
+    opacity: .5;
     -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
             transform: translateY(180%) translateX(65%) rotate(180deg);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translateY(650%) translateX(65%) rotate(180deg);
             transform: translateY(650%) translateX(65%) rotate(180deg);
   }
@@ -642,6 +648,26 @@ body {
           animation: bottlepath 20s forwards linear;
 }
 
+.active.plasticbagpath {
+  -webkit-animation: plasticbagpath 15s forwards ease-in-out;
+          animation: plasticbagpath 15s forwards ease-in-out;
+  opacity: 0%;
+  z-index: 2;
+}
+
+.active.movesmallturtle {
+  -webkit-transform: translate(-50%, 150%);
+          transform: translate(-50%, 150%);
+  -webkit-animation: movesmallturtle 6s 1.5s forwards;
+          animation: movesmallturtle 6s 1.5s forwards;
+}
+
+.jellyfish {
+  opacity: 50%;
+  -webkit-animation: movejellyfish 5s infinite forwards;
+          animation: movejellyfish 5s infinite forwards;
+}
+
 .active.fishpath {
   -webkit-transform: translateX(10%) translatey(-10%);
           transform: translateX(10%) translatey(-10%);
@@ -654,31 +680,11 @@ body {
           animation: fishfinside 1s infinite alternate;
 }
 
-.active.plasticbagpath {
-  -webkit-animation: plasticbagpath 15s forwards ease-in-out;
-          animation: plasticbagpath 15s forwards ease-in-out;
-  opacity: 0%;
-  z-index: 2;
-}
-
 #jellyfish__leg--two,
 #jellyfish__leg--four,
 #jellyfish__leg--six {
   -webkit-animation: movejellyfishlegs 3s infinite alternate;
           animation: movejellyfishlegs 3s infinite alternate;
-}
-
-.jellyfish {
-  opacity: 50%;
-  -webkit-animation: movejellyfish 5s infinite forwards;
-          animation: movejellyfish 5s infinite forwards;
-}
-
-.active.movesmallturtle {
-  -webkit-transform: translate(-50%, 150%);
-          transform: translate(-50%, 150%);
-  -webkit-animation: movesmallturtle 6s 1.5s forwards;
-          animation: movesmallturtle 6s 1.5s forwards;
 }
 
 #sturtle__frontfoot--right,
@@ -793,9 +799,14 @@ section .text__container {
   transition: transform 1s, -webkit-transform 1s;
 }
 
-section .text__container:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+section .text__container:nth-child(1):hover {
+  -webkit-transform: scale(1.2) translateX(8%);
+          transform: scale(1.2) translateX(8%);
+}
+
+section .text__container:nth-child(3):hover {
+  -webkit-transform: scale(1.1) translatex(-10%) translatey(70%);
+          transform: scale(1.1) translatex(-10%) translatey(70%);
 }
 
 section:nth-child(2) .text__box {
@@ -806,18 +817,23 @@ section:nth-child(2) .text__box {
 
 .information__paragraph--fngoal {
   width: 60rem;
-  height: 45vh;
+  height: 50vh;
   color: #1c7176;
-  -webkit-transform: translateX(0%) translateY(0%);
-          transform: translateX(0%) translateY(0%);
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+  position: relative;
+  bottom: 100vh;
   margin: auto !important;
 }
 
 .information__paragraph--you {
+  opacity: 90%;
   background-color: #8adee28e;
   padding: 1.5rem;
-  width: 35vw;
-  height: 55vh;
+  width: 70rem;
+  height: 50vh;
+  -webkit-transform: translatex(-10%) translatey(70%);
+          transform: translatex(-10%) translatey(70%);
   color: #175e61;
   font-family: rigid-square, sans-serif;
   font-style: normal;
@@ -855,84 +871,25 @@ section:nth-child(2) .text__box {
           animation: fade-left 3s ease-in forwards;
 }
 
-@media (orientation: landscape) {
-  body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .heading,
-  .active.armrotate,
-  .active.colapath,
-  .active.plasticbagpath,
-  #jellyfish__leg--two,
-  #jellyfish__leg--four,
-  #jellyfish__leg--six,
-  .jellyfish,
-  .active.movesmallturtle,
-  #sturtle__frontfoot--right,
-  #sturtle__backfoot--right,
-  #sturtle__frontfoot--left,
-  #sturtle__backfoot--left,
-  #sturtle__mouth,
-  section .text__container,
-  .active.fade-left,
-  .heading::before,
-  .svg__fish--eye,
-  .svg__fiskegarn,
-  .active.bottlepath {
-    -webkit-animation: none;
-            animation: none;
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    -webkit-filter: brightness(0.8);
-            filter: brightness(0.8);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    -webkit-filter: brightness(1);
-            filter: brightness(1);
-  }
-}
-
 .active.fiskegarnanimation {
-  -webkit-animation: fiskegarnanimation 10s forwards;
-          animation: fiskegarnanimation 10s forwards;
+  -webkit-animation: fiskegarnanimation 5s forwards;
+          animation: fiskegarnanimation 5s forwards;
 }
 
 .active.fiskegarnfalldown {
   -webkit-transform: translateX(65%) rotate(180deg);
           transform: translateX(65%) rotate(180deg);
   z-index: 1;
-  -webkit-animation: fiskegarnfalldown 10s forwards;
-          animation: fiskegarnfalldown 10s forwards;
+  opacity: 0;
+  -webkit-animation: fiskegarnfalldown 10s 1s forwards;
+          animation: fiskegarnfalldown 10s 1s forwards;
 }
 
 .active.fishstopper {
   -webkit-transform: translateX(440%) translateY(185%);
           transform: translateX(440%) translateY(185%);
-  -webkit-animation: fishstopper 10s forwards;
-          animation: fishstopper 10s forwards;
+  -webkit-animation: fishstopper 10s 1s forwards;
+          animation: fishstopper 10s 1s forwards;
 }
 
 #fish__tail--top, #fish__tail--bottom {
@@ -954,7 +911,16 @@ li {
           transform: translateX(900%) translateY(70%);
 }
 
-#sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
+.svg__jellyfish--small,
+.svg__jellyfish--small2 {
+  opacity: 90%;
+}
+
+#sjellyfish__leg--five,
+#sjellyfish__leg--four,
+#sjellyfish__leg--one,
+#sjellyfish__leg--two,
+#sjellyfish__leg--three {
   -webkit-animation: movejellyfishlegs 5s alternate infinite;
           animation: movejellyfishlegs 5s alternate infinite;
 }
@@ -998,5 +964,73 @@ li {
 .svg__bturtle--bottom {
   -webkit-transform: translateX(30%) translateY(-20%) rotate(-30deg);
           transform: translateX(30%) translateY(-20%) rotate(-30deg);
+}
+
+@media (orientation: landscape) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .heading,
+  .active.armrotate,
+  .active.colapath,
+  .active.plasticbagpath,
+  #jellyfish__leg--two,
+  #jellyfish__leg--four,
+  #jellyfish__leg--six,
+  .jellyfish,
+  .active.movesmallturtle,
+  #sturtle__frontfoot--right,
+  #sturtle__backfoot--right,
+  #sturtle__frontfoot--left,
+  #sturtle__backfoot--left,
+  #sturtle__mouth,
+  section .text__container,
+  .active.fade-left,
+  .heading::before,
+  .svg__fish--eye,
+  .svg__fiskegarn,
+  .active.bottlepath,
+  section .text__container:nth-child(3):hover,
+  section .text__container:nth-child(1):hover,
+  .active.fishpath,
+  #sjellyfish__leg--five,
+  #sjellyfish__leg--four,
+  #sjellyfish__leg--one,
+  #sjellyfish__leg--two,
+  #sjellyfish__leg--three {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    -webkit-filter: brightness(0.8);
+            filter: brightness(0.8);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
 }
 /*# sourceMappingURL=index.css.map */

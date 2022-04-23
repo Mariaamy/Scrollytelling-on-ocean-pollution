@@ -149,6 +149,10 @@ section:nth-child(1) {
     transform: translatey(1000%);
   }
 
+  .test2 {
+    min-height: 50%;
+  }
+
   section .container {
     margin: 100px;
   }
@@ -317,43 +321,26 @@ section:nth-child(1) {
 }
 
 .information__paragraph--fngoal { // added info - need more?
-  transform: translateX(140%) translateY(50%);
+  transform: translateX(100%) translateY(50%);
   width: 60rem;
   font-size: 1.3rem;
 }
 
 // section 1 - mathias - animasjoner
 
-.svg__fiskegarn { // første fiskegarn animasjonen
-  animation: fiskegarnanimation 10s forwards; // animasjonen ligger i _keyframes.scss
+.active.fiskegarnanimation { // første fiskegarn animasjonen
+  animation: fiskegarnanimation 10s forwards; 
 }
 
-.svg__fiskegarn--2 {
+.active.fiskegarnfalldown { // fiskegarn2
   transform: translateX(65%) rotate(180deg);
   z-index: 1;
-  animation: fiskegarnfalldown 10s forwards;
+  animation: fiskegarnfalldown 15s forwards;
 }
 
-@keyframes fishstopper { // need to move the animations to _keyframes.scss og legge til .action."animation-name" (?)
-  0% { transform: translateX(440%) translateY(165%);}
-  50% { transform: translateY(200%) translateX(-20%)}
-  100% { transform: translateY(885%) translateX(-20%)}
-}
-
-.svg__fish--eye {
-  transform: translateX(440%) translateY(185%); //440 translateX - translateY (885) -- translateX (-20%) animasjon på bunnen
-  animation: fishstopper 10s forwards; 
-}
-
-@keyframes fiskegarnfalldown { // need to move the animations to _keyframes.scss og legge til .action."animation-name" (?)
-  0% { transform: translateX(65%) rotate(180deg);}
-  50% { transform: translateY(180%) translateX(65%)  rotate(180deg);}
-  100% { transform: translateY(950%) translateX(65%) rotate(180deg);}
-} 
-
-@keyframes fiskefinnerbevegelse { // fiske finne animation
-  from {transform: skew(5deg);}
-  to {transform:skew(-5deg)}
+.active.fishstopper { // fisken section 2
+  transform: translateX(440%) translateY(185%);
+  animation: fishstopper 15s forwards; 
 }
 
 #fish__tail--top, #fish__tail--bottom { // targeter finnene til fisken
@@ -363,7 +350,7 @@ section:nth-child(1) {
 // 3rd section - mathias
 
 .information__paragraph--you { // added info - need more points!?
-  transform: translateX(70%) translateY(40%);
+  transform: translateX(30%) translateY(40%);
   font-size: 1.2rem;
 }
 
@@ -372,11 +359,11 @@ li {
 }
 
 .svg__jellyfish--small {
-  transform: translateX(900%) translateY(320%);
+  transform: translateX(700%) translateY(420%);
 }
 
 .svg__jellyfish--small2 {
-  transform: translateX(1100%) translateY(320%);
+  transform: translateX(1000%) translateY(420%);
 }
 
 #sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
@@ -401,12 +388,12 @@ li {
 // havbunnen delen - plasseringer
 
 .svg__colabox {
-  transform:translateX(80%) translateY(10%);
+  transform:translateX(450%) translateY(10%);
   z-index: 1;
 }
 
 .svg__colabox-2 {
-  transform:translateX(1260%) translateY(10%);
+  transform:translateX(960%) translateY(10%);
 }
 
 .svg__rope {
@@ -414,23 +401,23 @@ li {
 }
 
 .svg__rock {
-  transform: translateX(450%) translateY(-40%);
+  transform: translateX(280%) translateY(-40%);
 }
 
 .svg__straw {
-  transform: translateX(90%) translateY(-20%) rotate(-60deg);
+  transform: translateX(770%) translateY(-20%) rotate(-60deg);
 }
 
 .svg__straw-2 {
-  transform: translateX(4520%) translateY(-20%) rotate(50deg);
+  transform: translateX(3050%) translateY(-20%) rotate(50deg);
 }
 
 .svg__plasticbag--bottom {
-  transform: translateX(380%) rotate(40deg) translateY(-30%);
+  transform: translateX(480%) rotate(40deg) translateY(-30%);
 }
 
 .svg__bturtle--bottom {
-  transform: translateX(90%) translateY(-20%) rotate(-30deg);
+  transform: translateX(100%) translateY(-20%) rotate(-30deg);
 }
 
 

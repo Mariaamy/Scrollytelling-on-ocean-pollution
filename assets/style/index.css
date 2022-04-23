@@ -462,115 +462,33 @@
 
 @-webkit-keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%) translateX(0%);
-            transform: translateY(20%) translateX(0%);
+    -webkit-transform: translateY(20%) translateX(-160%);
+            transform: translateY(20%) translateX(-160%);
   }
   50% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
+            transform: translateY(420%) translateX(-160%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
+            transform: translateY(420%) translateX(-10%) rotate(180deg);
     opacity: 0;
   }
 }
 
 @keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%) translateX(0%);
-            transform: translateY(20%) translateX(0%);
+    -webkit-transform: translateY(20%) translateX(-160%);
+            transform: translateY(20%) translateX(-160%);
   }
   50% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
+            transform: translateY(420%) translateX(-160%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
+            transform: translateY(420%) translateX(-10%) rotate(180deg);
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes fiskefinnerbevegelse {
-  from {
-    -webkit-transform: skew(5deg);
-            transform: skew(5deg);
-  }
-  to {
-    -webkit-transform: skew(-5deg);
-            transform: skew(-5deg);
-  }
-}
-
-@keyframes fiskefinnerbevegelse {
-  from {
-    -webkit-transform: skew(5deg);
-            transform: skew(5deg);
-  }
-  to {
-    -webkit-transform: skew(-5deg);
-            transform: skew(-5deg);
-  }
-}
-
-@-webkit-keyframes fiskegarnfalldown {
-  0% {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  50% {
-    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
-            transform: translateY(180%) translateX(65%) rotate(180deg);
-  }
-  100% {
-    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
-            transform: translateY(1300%) translateX(65%) rotate(180deg);
-  }
-}
-
-@keyframes fiskegarnfalldown {
-  0% {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  50% {
-    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
-            transform: translateY(180%) translateX(65%) rotate(180deg);
-  }
-  100% {
-    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
-            transform: translateY(1300%) translateX(65%) rotate(180deg);
-  }
-}
-
-@-webkit-keyframes fishstopper {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
-  }
-  100% {
-    -webkit-transform: translateY(1125%) translateX(-20%);
-            transform: translateY(1125%) translateX(-20%);
-  }
-}
-
-@keyframes fishstopper {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
-  }
-  100% {
-    -webkit-transform: translateY(1125%) translateX(-20%);
-            transform: translateY(1125%) translateX(-20%);
   }
 }
 
@@ -771,12 +689,6 @@ section:nth-child(12) .ocean__bottom--yellow {
           transform: translatey(1000%);
 }
 
-.test2 {
-  min-height: 50%;
-}
-
-section .container {
-  
 section .text {
   margin: 100px;
 }
@@ -914,34 +826,106 @@ section:nth-child(2) .text__box {
   border: solid;
 }
 
-
-.information__paragraph--fngoal {
-  -webkit-transform: translateX(100%) translateY(50%);
-          transform: translateX(100%) translateY(50%);
-  width: 60rem;
-  font-size: 1.1rem;
-}
-
-.active.fiskegarnanimation {
-
 .svg__fiskegarn {
   -webkit-animation: fiskegarnanimation 10s forwards;
           animation: fiskegarnanimation 10s forwards;
 }
 
-.active.fiskegarnfalldown {
+.svg__fiskegarn--2 {
   -webkit-transform: translateX(65%) rotate(180deg);
           transform: translateX(65%) rotate(180deg);
   z-index: 1;
-  -webkit-animation: fiskegarnfalldown 15s forwards;
-          animation: fiskegarnfalldown 15s forwards;
+  -webkit-animation: fiskegarnfalldown 10s forwards;
+          animation: fiskegarnfalldown 10s forwards;
 }
 
-.active.fishstopper {
+@-webkit-keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(885%) translateX(-20%);
+            transform: translateY(885%) translateX(-20%);
+  }
+}
+
+@keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(885%) translateX(-20%);
+            transform: translateY(885%) translateX(-20%);
+  }
+}
+
+.svg__fish--eye {
   -webkit-transform: translateX(440%) translateY(185%);
           transform: translateX(440%) translateY(185%);
-  -webkit-animation: fishstopper 15s forwards;
-          animation: fishstopper 15s forwards;
+  -webkit-animation: fishstopper 10s forwards;
+          animation: fishstopper 10s forwards;
+}
+
+@-webkit-keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
+            transform: translateY(950%) translateX(65%) rotate(180deg);
+  }
+}
+
+@keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
+            transform: translateY(950%) translateX(65%) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
+}
+
+@keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
 }
 
 #fish__tail--top, #fish__tail--bottom {
@@ -950,8 +934,8 @@ section:nth-child(2) .text__box {
 }
 
 .information__paragraph--you {
-  -webkit-transform: translateX(30%) translateY(40%);
-          transform: translateX(30%) translateY(40%);
+  -webkit-transform: translateX(70%) translateY(40%);
+          transform: translateX(70%) translateY(40%);
   font-size: 1.2rem;
 }
 
@@ -960,13 +944,13 @@ li {
 }
 
 .svg__jellyfish--small {
-  -webkit-transform: translateX(700%) translateY(420%);
-          transform: translateX(700%) translateY(420%);
+  -webkit-transform: translateX(900%) translateY(320%);
+          transform: translateX(900%) translateY(320%);
 }
 
 .svg__jellyfish--small2 {
-  -webkit-transform: translateX(1000%) translateY(420%);
-          transform: translateX(1000%) translateY(420%);
+  -webkit-transform: translateX(1100%) translateY(320%);
+          transform: translateX(1100%) translateY(320%);
 }
 
 #sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
@@ -990,14 +974,14 @@ li {
 }
 
 .svg__colabox {
-  -webkit-transform: translateX(450%) translateY(10%);
-          transform: translateX(450%) translateY(10%);
+  -webkit-transform: translateX(80%) translateY(10%);
+          transform: translateX(80%) translateY(10%);
   z-index: 1;
 }
 
 .svg__colabox-2 {
-  -webkit-transform: translateX(960%) translateY(10%);
-          transform: translateX(960%) translateY(10%);
+  -webkit-transform: translateX(1260%) translateY(10%);
+          transform: translateX(1260%) translateY(10%);
 }
 
 .svg__rope {
@@ -1006,27 +990,27 @@ li {
 }
 
 .svg__rock {
-  -webkit-transform: translateX(280%) translateY(-40%);
-          transform: translateX(280%) translateY(-40%);
+  -webkit-transform: translateX(450%) translateY(-40%);
+          transform: translateX(450%) translateY(-40%);
 }
 
 .svg__straw {
-  -webkit-transform: translateX(770%) translateY(-20%) rotate(-60deg);
-          transform: translateX(770%) translateY(-20%) rotate(-60deg);
+  -webkit-transform: translateX(90%) translateY(-20%) rotate(-60deg);
+          transform: translateX(90%) translateY(-20%) rotate(-60deg);
 }
 
 .svg__straw-2 {
-  -webkit-transform: translateX(3050%) translateY(-20%) rotate(50deg);
-          transform: translateX(3050%) translateY(-20%) rotate(50deg);
+  -webkit-transform: translateX(4520%) translateY(-20%) rotate(50deg);
+          transform: translateX(4520%) translateY(-20%) rotate(50deg);
 }
 
 .svg__plasticbag--bottom {
-  -webkit-transform: translateX(480%) rotate(40deg) translateY(-30%);
-          transform: translateX(480%) rotate(40deg) translateY(-30%);
+  -webkit-transform: translateX(380%) rotate(40deg) translateY(-30%);
+          transform: translateX(380%) rotate(40deg) translateY(-30%);
 }
 
 .svg__bturtle--bottom {
-  -webkit-transform: translateX(100%) translateY(-20%) rotate(-30deg);
-          transform: translateX(100%) translateY(-20%) rotate(-30deg);
+  -webkit-transform: translateX(90%) translateY(-20%) rotate(-30deg);
+          transform: translateX(90%) translateY(-20%) rotate(-30deg);
 }
 /*# sourceMappingURL=index.css.map */

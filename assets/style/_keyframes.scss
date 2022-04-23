@@ -140,9 +140,9 @@ to {transform: rotate(-30deg);}
 }
 
 @keyframes fiskegarnanimation {
-  0% { transform:translateY(20%);}
-  50% {transform:translateY(420%) rotate(180deg);}
+  0% { transform:translateY(20%) translateX(-160%);}
+  50% {transform:translateY(420%) translateX(-160%) rotate(180deg);}
   100% {
-    transform: translateY(420%) rotate(180deg);
+    transform: translateY(420%) translateX(-10%) rotate(180deg);
     opacity: 0;}
 }

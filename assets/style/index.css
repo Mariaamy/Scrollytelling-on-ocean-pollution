@@ -166,6 +166,80 @@
   }
 }
 
+@-webkit-keyframes bottlepath {
+  0% {
+    -webkit-transform: translate(300%, -50%) rotate(30deg);
+            transform: translate(300%, -50%) rotate(30deg);
+  }
+  50% {
+    opacity: 50%;
+    -webkit-transform: translate(300%, 100%) rotate(-20deg);
+            transform: translate(300%, 100%) rotate(-20deg);
+  }
+  100% {
+    opacity: 10%;
+    -webkit-transform: translate(300%, 125%) rotate(-20deg);
+            transform: translate(300%, 125%) rotate(-20deg);
+  }
+}
+
+@keyframes bottlepath {
+  0% {
+    -webkit-transform: translate(300%, -50%) rotate(30deg);
+            transform: translate(300%, -50%) rotate(30deg);
+  }
+  50% {
+    opacity: 50%;
+    -webkit-transform: translate(300%, 100%) rotate(-20deg);
+            transform: translate(300%, 100%) rotate(-20deg);
+  }
+  100% {
+    opacity: 10%;
+    -webkit-transform: translate(300%, 125%) rotate(-20deg);
+            transform: translate(300%, 125%) rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes fishpath {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -110%;
+  }
+}
+
+@keyframes fishpath {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -110%;
+  }
+}
+
+@-webkit-keyframes fishfinside {
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes fishfinside {
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
 @-webkit-keyframes plasticbagpath {
   0% {
     opacity: 0%;
@@ -503,6 +577,25 @@ body {
           transform: translatey(-100%) translatex(-100%);
 }
 
+.active.bottlepath {
+  -webkit-transform: translateX(280%) translateY(-25%);
+          transform: translateX(280%) translateY(-25%);
+  -webkit-animation: bottlepath 20s forwards linear;
+          animation: bottlepath 20s forwards linear;
+}
+
+.fish_svg {
+  -webkit-transform: translateX(300%) translateY(-2800%);
+          transform: translateX(300%) translateY(-2800%);
+  -webkit-animation: fishpath 15s forwards ease-in-out;
+          animation: fishpath 15s forwards ease-in-out;
+}
+
+#fish__fin--side {
+  -webkit-animation: fishfinside 1s infinite alternate;
+          animation: fishfinside 1s infinite alternate;
+}
+
 .active.plasticbagpath {
   -webkit-animation: plasticbagpath 15s forwards ease-in-out;
           animation: plasticbagpath 15s forwards ease-in-out;
@@ -717,7 +810,10 @@ section:nth-child(2) .text-box {
   #sturtle__mouth,
   section .text-container,
   .active.fade-left,
-  .information__paragraph--introduction::before .svg__fish--eye .svg__fiskegarn {
+  .svg__fish--eye,
+  .svg__fiskegarn,
+  .information__paragraph--introduction::before,
+  .active.bottlepath {
     -webkit-animation: none;
             animation: none;
     -webkit-transition: none;
@@ -937,4 +1033,5 @@ li {
   -webkit-transform: translateX(90%) translateY(-20%) rotate(-30deg);
           transform: translateX(90%) translateY(-20%) rotate(-30deg);
 }
+
 /*# sourceMappingURL=index.css.map */

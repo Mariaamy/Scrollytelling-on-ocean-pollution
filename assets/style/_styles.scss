@@ -45,9 +45,9 @@ body {
   animation: bottlepath 20s forwards linear;
 }
 
-.fish_svg {
-  transform: translateX(300%) translateY(-2800%);
-  animation: fishpath 15s forwards ease-in-out;
+.fish.svg {
+  transform: translateX(300%) translatey(-2800%);
+  animation: fishpath 20s forwards;
 }
 
 #fish__fin--side {

@@ -147,9 +147,26 @@ to {transform: rotate(-30deg);}
 }
 
 @keyframes fiskegarnanimation {
-  0% { transform:translateY(20%) translateX(-160%);}
-  50% {transform:translateY(420%) translateX(-160%) rotate(180deg);}
+  0% { transform:translateY(20%) translateX(0%);}
+  50% {transform:translateY(600%) translateX(-350%) rotate(180deg);}
   100% {
-    transform: translateY(420%) translateX(-10%) rotate(180deg);
+    transform: translateY(600%) translateX(-350%) rotate(180deg);
     opacity: 0;}
+}
+
+@keyframes fiskefinnerbevegelse {
+  from {transform: skew(5deg);}
+  to {transform:skew(-5deg)}
+}
+
+@keyframes fiskegarnfalldown {
+  0% { transform: translateX(65%) rotate(180deg);}
+  50% { transform: translateY(180%) translateX(65%)  rotate(180deg);}
+  100% { transform: translateY(1300%) translateX(65%) rotate(180deg);}
+} 
+
+@keyframes fishstopper {
+  0% { transform: translateX(440%) translateY(165%);}
+  50% { transform: translateY(200%) translateX(-20%)}
+  100% { transform: translateY(1125%) translateX(-20%)}
 }

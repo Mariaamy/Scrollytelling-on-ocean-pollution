@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes textfromleft {
   from {
     -webkit-transform: translatex(-250%);
@@ -9,6 +8,7 @@
             transform: translatex(40%);
   }
 }
+
 @keyframes textfromleft {
   from {
     -webkit-transform: translatex(-250%);
@@ -132,11 +132,11 @@
   75% {
     -webkit-transform: translateY(0%) translatex(-250%) scale(90%);
             transform: translateY(0%) translatex(-250%) scale(90%);
-    opacity: 100%;
+    opacity: 50%;
   }
   100% {
-    -webkit-transform: translateY(100%) translatex(-200%) scale(100%);
-            transform: translateY(100%) translatex(-200%) scale(100%);
+    -webkit-transform: translateY(30%) translatex(-200%) scale(100%);
+            transform: translateY(30%) translatex(-200%) scale(100%);
     opacity: 0%;
   }
 }
@@ -157,52 +157,54 @@
   75% {
     -webkit-transform: translateY(0%) translatex(-250%) scale(90%);
             transform: translateY(0%) translatex(-250%) scale(90%);
-    opacity: 100%;
+    opacity: 50%;
   }
   100% {
-    -webkit-transform: translateY(100%) translatex(-200%) scale(100%);
-            transform: translateY(100%) translatex(-200%) scale(100%);
+    -webkit-transform: translateY(30%) translatex(-200%) scale(100%);
+            transform: translateY(30%) translatex(-200%) scale(100%);
     opacity: 0%;
   }
 }
 
 @-webkit-keyframes bottlepath {
   0% {
-    -webkit-transform: translate(300%, -50%) rotate(30deg);
-            transform: translate(300%, -50%) rotate(30deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, -110%) rotate(30deg);
+            transform: translate(220%, -110%) rotate(30deg);
   }
   50% {
-    opacity: 50%;
-    -webkit-transform: translate(300%, 100%) rotate(-20deg);
-            transform: translate(300%, 100%) rotate(-20deg);
+    opacity: 80%;
+    -webkit-transform: translate(220%, 100%) rotate(-20deg);
+            transform: translate(220%, 100%) rotate(-20deg);
   }
   100% {
-    opacity: 10%;
-    -webkit-transform: translate(300%, 125%) rotate(-20deg);
-            transform: translate(300%, 125%) rotate(-20deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, 125%) rotate(-20deg);
+            transform: translate(220%, 125%) rotate(-20deg);
   }
 }
 
 @keyframes bottlepath {
   0% {
-    -webkit-transform: translate(300%, -50%) rotate(30deg);
-            transform: translate(300%, -50%) rotate(30deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, -110%) rotate(30deg);
+            transform: translate(220%, -110%) rotate(30deg);
   }
   50% {
-    opacity: 50%;
-    -webkit-transform: translate(300%, 100%) rotate(-20deg);
-            transform: translate(300%, 100%) rotate(-20deg);
+    opacity: 80%;
+    -webkit-transform: translate(220%, 100%) rotate(-20deg);
+            transform: translate(220%, 100%) rotate(-20deg);
   }
   100% {
-    opacity: 10%;
-    -webkit-transform: translate(300%, 125%) rotate(-20deg);
-            transform: translate(300%, 125%) rotate(-20deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, 125%) rotate(-20deg);
+            transform: translate(220%, 125%) rotate(-20deg);
   }
 }
 
 @-webkit-keyframes fishpath {
   0% {
-    margin-left: 100%;
+    margin-left: 90%;
   }
   100% {
     margin-left: -110%;
@@ -211,7 +213,7 @@
 
 @keyframes fishpath {
   0% {
-    margin-left: 100%;
+    margin-left: 90%;
   }
   100% {
     margin-left: -110%;
@@ -315,28 +317,6 @@
     -webkit-transform: translate(-50%, 297%) rotate(215deg);
             transform: translate(-50%, 297%) rotate(215deg);
     z-index: 1;
-  }
-}
-
-@-webkit-keyframes armrotate {
-  from {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(0deg);
-            transform: translatey(-100%) translatex(785%) rotate(0deg);
-  }
-  to {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(60deg);
-            transform: translatey(-100%) translatex(785%) rotate(60deg);
-  }
-}
-
-@keyframes armrotate {
-  from {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(0deg);
-            transform: translatey(-100%) translatex(785%) rotate(0deg);
-  }
-  to {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(60deg);
-            transform: translatey(-100%) translatex(785%) rotate(60deg);
   }
 }
 
@@ -601,12 +581,14 @@
           box-sizing: border-box;
 }
 
-.active.armrotate, #jellyfish__leg--two,
-#jellyfish__leg--four,
-#jellyfish__leg--six, #sturtle__frontfoot--right,
+#sturtle__frontfoot--right,
 #sturtle__backfoot--right,
 #sturtle__frontfoot--left,
-#sturtle__backfoot--left, #sturtle__mouth {
+#sturtle__backfoot--left,
+#sturtle__mouth,
+#jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -622,11 +604,12 @@ body {
   overflow-x: hidden;
 }
 
-.information__paragraph--introduction {
+.heading {
   font-family: rigid-square, sans-serif;
   font-style: normal;
   font-size: 3rem;
   font-weight: 700;
+  text-shadow: -1px 0 #8adee28e, 0 1px #8adee28e, 1px 0 #8adee28e, 0 -1px #8adee28e;
   margin-top: -15rem;
   -webkit-animation: textfromleft 5s forwards ease-out;
           animation: textfromleft 5s forwards ease-out;
@@ -634,7 +617,7 @@ body {
           animation-iteration-count: 1;
 }
 
-.information__paragraph--introduction::before {
+.heading::before {
   content: '';
   position: absolute;
   top: .25em;
@@ -643,13 +626,6 @@ body {
   border-top-color: #e0ffff;
   -webkit-animation: bounce 1s infinite alternate;
           animation: bounce 1s infinite alternate;
-}
-
-.active.armrotate {
-  -webkit-transform: translatey(-100%) translatex(785%);
-          transform: translatey(-100%) translatex(785%);
-  -webkit-animation: armrotate 3s forwards ease-out;
-          animation: armrotate 3s forwards ease-out;
 }
 
 .active.colapath {
@@ -666,11 +642,11 @@ body {
           animation: bottlepath 20s forwards linear;
 }
 
-.fish_svg {
-  -webkit-transform: translateX(300%) translateY(-2800%);
-          transform: translateX(300%) translateY(-2800%);
-  -webkit-animation: fishpath 15s forwards ease-in-out;
-          animation: fishpath 15s forwards ease-in-out;
+.fish.svg {
+  -webkit-transform: translateX(300%) translatey(-2800%);
+          transform: translateX(300%) translatey(-2800%);
+  -webkit-animation: fishpath 20s forwards;
+          animation: fishpath 20s forwards;
 }
 
 #fish__fin--side {
@@ -800,10 +776,12 @@ section:nth-child(12) .ocean__bottom--yellow {
 }
 
 section .container {
+  
+section .text {
   margin: 100px;
 }
 
-.text-box {
+.text__box {
   color: #26999f;
   font-family: rigid-square, sans-serif;
   font-style: normal;
@@ -812,7 +790,7 @@ section .container {
   text-align: center;
 }
 
-section .text-container {
+section .text__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,20 +803,31 @@ section .text-container {
   transition: transform 1s, -webkit-transform 1s;
 }
 
-section .text-container:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+section .text__container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-/*
-  Utkommentert kode er utkommentert fordi vi ikke
-  bruker det. Disse er ikke nødvendig med mindre vi finner ut
-  at vi vil ha et tekstfelt til etc. om ikke, kan de trygt slettes.
-  */
-section:nth-child(2) .text-box {
+section:nth-child(2) .text__box {
   width: 40vw;
   height: 50vh;
   position: relative;
+}
+
+.information__paragraph--fngoal {
+  width: 60rem;
+  height: 65vh;
+  color: #1c7176;
+  -webkit-transform: translateX(20%) translateY(0%);
+          transform: translateX(20%) translateY(0%);
+}
+
+.information__paragraph--you {
+  background-color: #8adee28e;
+  padding: 1.5rem;
+  width: 35vw;
+  height: 55vh;
+  color: #124a4d;
 }
 
 .citations {
@@ -880,7 +869,7 @@ section:nth-child(2) .text-box {
 }
 
 @media (prefers-reduced-motion) {
-  .information__paragraph--introduction,
+  .heading,
   .active.armrotate,
   .active.colapath,
   .active.plasticbagpath,
@@ -894,9 +883,9 @@ section:nth-child(2) .text-box {
   #sturtle__frontfoot--left,
   #sturtle__backfoot--left,
   #sturtle__mouth,
-  section .text-container,
+  section .text__container,
   .active.fade-left,
-  .information__paragraph--introduction::before,
+  .heading::before,
   .svg__fish--eye,
   .svg__fiskegarn,
   .active.bottlepath {
@@ -925,6 +914,7 @@ section:nth-child(2) .text-box {
   border: solid;
 }
 
+
 .information__paragraph--fngoal {
   -webkit-transform: translateX(100%) translateY(50%);
           transform: translateX(100%) translateY(50%);
@@ -933,6 +923,8 @@ section:nth-child(2) .text-box {
 }
 
 .active.fiskegarnanimation {
+
+.svg__fiskegarn {
   -webkit-animation: fiskegarnanimation 10s forwards;
           animation: fiskegarnanimation 10s forwards;
 }

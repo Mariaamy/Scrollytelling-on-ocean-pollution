@@ -9,17 +9,6 @@
 }
 
 
-// @keyframes fade-bottom {
-//     0% {
-//       transform: translateY(50px);
-//       opacity: 0;
-//     }
-//     100% {
-//       transform: translateY(0);
-//       opacity: 1;
-//     }
-//   }
-
 @keyframes objectfromright {
   from {transform: translatex(410%) translateY(60%)}
   to {transform: translatex(-100%) translateY(60%)};
@@ -46,17 +35,6 @@
       opacity: 1;
     }
   }
-  
-  // @keyframes fade-right {
-  //   0% {
-  //     transform: translateX(100px);
-  //     opacity: 0;
-  //   }
-  //   100% {
-  //     transform: translateX(0);
-  //     opacity: 1;
-  //   }
-  // }
 
   @keyframes colapath {
     0% {
@@ -70,31 +48,32 @@
     }
     75% {
       transform: translateY(0%) translatex(-250%) scale(90%);
-      opacity: 100%;
+      opacity: 50%;
     }
     100% {
-      transform: translateY(100%) translatex(-200%) scale(100%);
+      transform: translateY(30%) translatex(-200%) scale(100%);
       opacity: 0%
     }
   }
 
   @keyframes bottlepath {
     0% {
-      transform: translate(300%, -50%) rotate(30deg);
+      opacity: 0%;
+      transform: translate(220%, -110%) rotate(30deg);
     }
     50% {
-      opacity: 50%;
-      transform: translate(300%, 100%) rotate(-20deg);
+      opacity: 80%;
+      transform: translate(220%, 100%) rotate(-20deg);
     }
     100% {
-      opacity: 10%;
-      transform: translate(300%, 125%) rotate(-20deg);
+      opacity: 0%;
+      transform: translate(220%, 125%) rotate(-20deg);
     }
   }
 
   @keyframes fishpath {
     0% {
-      margin-left: 100%;
+      margin-left: 90%;
     }
     100% {
       margin-left: -110%;
@@ -135,10 +114,6 @@
       z-index: 1};
   }
 
-  @keyframes armrotate {
-    from {transform: translatey(-100%) translatex(785%) rotate(0deg);}
-    to   {transform: translatey(-100%) translatex(785%) rotate(60deg);}
-  }
 
   @keyframes movejellyfishlegs {
     from {transform: rotatez(-5deg);}

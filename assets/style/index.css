@@ -466,12 +466,12 @@
             transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
+            transform: translateY(280%) translateX(-515%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
+            transform: translateY(280%) translateX(-515%) rotate(180deg);
     opacity: 0;
   }
 }
@@ -482,12 +482,12 @@
             transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
+            transform: translateY(280%) translateX(-515%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
-            transform: translateY(600%) translateX(-350%) rotate(180deg);
+    -webkit-transform: translateY(280%) translateX(-515%) rotate(180deg);
+            transform: translateY(280%) translateX(-515%) rotate(180deg);
     opacity: 0;
   }
 }
@@ -524,8 +524,8 @@
             transform: translateY(180%) translateX(65%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
-            transform: translateY(1300%) translateX(65%) rotate(180deg);
+    -webkit-transform: translateY(650%) translateX(65%) rotate(180deg);
+            transform: translateY(650%) translateX(65%) rotate(180deg);
   }
 }
 
@@ -539,8 +539,8 @@
             transform: translateY(180%) translateX(65%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
-            transform: translateY(1300%) translateX(65%) rotate(180deg);
+    -webkit-transform: translateY(650%) translateX(65%) rotate(180deg);
+            transform: translateY(650%) translateX(65%) rotate(180deg);
   }
 }
 
@@ -550,12 +550,12 @@
             transform: translateX(440%) translateY(165%);
   }
   50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
+    -webkit-transform: translateY(350%) translateX(-20%);
+            transform: translateY(350%) translateX(-20%);
   }
   100% {
-    -webkit-transform: translateY(1125%) translateX(-20%);
-            transform: translateY(1125%) translateX(-20%);
+    -webkit-transform: translateY(1055%) translateX(-20%);
+            transform: translateY(1055%) translateX(-20%);
   }
 }
 
@@ -565,12 +565,12 @@
             transform: translateX(440%) translateY(165%);
   }
   50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
+    -webkit-transform: translateY(350%) translateX(-20%);
+            transform: translateY(350%) translateX(-20%);
   }
   100% {
-    -webkit-transform: translateY(1125%) translateX(-20%);
-            transform: translateY(1125%) translateX(-20%);
+    -webkit-transform: translateY(1055%) translateX(-20%);
+            transform: translateY(1055%) translateX(-20%);
   }
 }
 
@@ -806,10 +806,11 @@ section:nth-child(2) .text__box {
 
 .information__paragraph--fngoal {
   width: 60rem;
-  height: 65vh;
+  height: 45vh;
   color: #1c7176;
-  -webkit-transform: translateX(20%) translateY(0%);
-          transform: translateX(20%) translateY(0%);
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
+  margin: auto !important;
 }
 
 .information__paragraph--you {
@@ -822,6 +823,7 @@ section:nth-child(2) .text__box {
   font-style: normal;
   font-size: 1.2rem;
   font-weight: 400;
+  margin: auto;
 }
 
 .citations,
@@ -913,16 +915,12 @@ section:nth-child(2) .text__box {
   }
 }
 
-.test {
-  border: solid;
-}
-
-.svg__fiskegarn {
+.active.fiskegarnanimation {
   -webkit-animation: fiskegarnanimation 10s forwards;
           animation: fiskegarnanimation 10s forwards;
 }
 
-.svg__fiskegarn--2 {
+.active.fiskegarnfalldown {
   -webkit-transform: translateX(65%) rotate(180deg);
           transform: translateX(65%) rotate(180deg);
   z-index: 1;
@@ -930,52 +928,11 @@ section:nth-child(2) .text__box {
           animation: fiskegarnfalldown 10s forwards;
 }
 
-@keyframes fishstopper {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
-  }
-  100% {
-    -webkit-transform: translateY(885%) translateX(-20%);
-            transform: translateY(885%) translateX(-20%);
-  }
-}
-
-.svg__fish--eye {
+.active.fishstopper {
   -webkit-transform: translateX(440%) translateY(185%);
           transform: translateX(440%) translateY(185%);
   -webkit-animation: fishstopper 10s forwards;
           animation: fishstopper 10s forwards;
-}
-
-@keyframes fiskegarnfalldown {
-  0% {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  50% {
-    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
-            transform: translateY(180%) translateX(65%) rotate(180deg);
-  }
-  100% {
-    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
-            transform: translateY(950%) translateX(65%) rotate(180deg);
-  }
-}
-
-@keyframes fiskefinnerbevegelse {
-  from {
-    -webkit-transform: skew(5deg);
-            transform: skew(5deg);
-  }
-  to {
-    -webkit-transform: skew(-5deg);
-            transform: skew(-5deg);
-  }
 }
 
 #fish__tail--top, #fish__tail--bottom {
@@ -988,13 +945,13 @@ li {
 }
 
 .svg__jellyfish--small {
-  -webkit-transform: translateX(900%) translateY(320%);
-          transform: translateX(900%) translateY(320%);
+  -webkit-transform: translateX(800%) translateY(-40%);
+          transform: translateX(800%) translateY(-40%);
 }
 
 .svg__jellyfish--small2 {
-  -webkit-transform: translateX(1100%) translateY(320%);
-          transform: translateX(1100%) translateY(320%);
+  -webkit-transform: translateX(900%) translateY(70%);
+          transform: translateX(900%) translateY(70%);
 }
 
 #sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
@@ -1002,35 +959,20 @@ li {
           animation: movejellyfishlegs 5s alternate infinite;
 }
 
-.bubbles__bottom--one {
-  -webkit-transform: translateX(-210%) translateY(50%);
-          transform: translateX(-210%) translateY(50%);
-}
-
-.bubbles__bottom--two {
-  -webkit-transform: translateY(80%);
-          transform: translateY(80%);
-}
-
-.bubbles__bottom--three {
-  -webkit-transform: translateY(60%) translateX(-260%);
-          transform: translateY(60%) translateX(-260%);
-}
-
 .svg__colabox {
-  -webkit-transform: translateX(80%) translateY(10%);
-          transform: translateX(80%) translateY(10%);
+  -webkit-transform: translateX(50%) translateY(10%);
+          transform: translateX(50%) translateY(10%);
   z-index: 1;
 }
 
 .svg__colabox-2 {
-  -webkit-transform: translateX(1260%) translateY(10%);
-          transform: translateX(1260%) translateY(10%);
+  -webkit-transform: translateX(160%) translateY(10%);
+          transform: translateX(160%) translateY(10%);
 }
 
 .svg__rope {
-  -webkit-transform: rotate(-20deg) translateX(230%);
-          transform: rotate(-20deg) translateX(230%);
+  -webkit-transform: rotate(-20deg) translateX(530%) translateY(120%);
+          transform: rotate(-20deg) translateX(530%) translateY(120%);
 }
 
 .svg__rock {
@@ -1039,22 +981,22 @@ li {
 }
 
 .svg__straw {
-  -webkit-transform: translateX(90%) translateY(-20%) rotate(-60deg);
-          transform: translateX(90%) translateY(-20%) rotate(-60deg);
+  -webkit-transform: translateX(720%) translateY(-20%) rotate(-60deg);
+          transform: translateX(720%) translateY(-20%) rotate(-60deg);
 }
 
 .svg__straw-2 {
-  -webkit-transform: translateX(4520%) translateY(-20%) rotate(50deg);
-          transform: translateX(4520%) translateY(-20%) rotate(50deg);
+  -webkit-transform: translateX(1020%) translateY(-20%) rotate(50deg);
+          transform: translateX(1020%) translateY(-20%) rotate(50deg);
 }
 
 .svg__plasticbag--bottom {
-  -webkit-transform: translateX(380%) rotate(40deg) translateY(-30%);
-          transform: translateX(380%) rotate(40deg) translateY(-30%);
+  -webkit-transform: translateX(360%) rotate(40deg) translateY(-30%);
+          transform: translateX(360%) rotate(40deg) translateY(-30%);
 }
 
 .svg__bturtle--bottom {
-  -webkit-transform: translateX(90%) translateY(-20%) rotate(-30deg);
-          transform: translateX(90%) translateY(-20%) rotate(-30deg);
+  -webkit-transform: translateX(30%) translateY(-20%) rotate(-30deg);
+          transform: translateX(30%) translateY(-20%) rotate(-30deg);
 }
 /*# sourceMappingURL=index.css.map */

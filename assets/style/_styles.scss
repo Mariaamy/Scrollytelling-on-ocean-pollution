@@ -44,8 +44,8 @@ body {
   animation: bottlepath 20s forwards linear;
 }
 
-.fish.svg {
-  transform: translateX(300%) translatey(-2800%);
+.active.fishpath {
+  transform: translateX(10%) translatey(-10%);
   animation: fishpath 20s forwards;
 }
 
@@ -163,7 +163,7 @@ section:nth-child(1) {
 
   .text__box {
     color: $text-in-container;
-    @include font(1.5rem, 400);
+    // @include font(1.5rem, 400);
     text-align: center;
   }
 
@@ -189,7 +189,7 @@ section:nth-child(1) {
     @include wh(60rem, 65vh);
     color: darken($text-in-container, 10%);
     transform: translateX(20%) translateY(0%);
-
+    // @include font(1.5rem, 400);
   }
 
 
@@ -198,15 +198,22 @@ section:nth-child(1) {
     background-color: $container;
     padding: 1.5rem;
     @include wh(35vw, 55vh);
-    color: darken($text-in-container, 20%);
+    color: darken($text-in-container, 15%);
+    @include font(1.2rem, 400);
   }
 
+  .citations,
+  .information__paragraph--fngoal,
+  .text__box {
+    @include font(1.5rem, 400);
+  }
   
 
   .citations {
     padding: 5%;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
+    // @include font(1.5rem, 400);
   }
   
   .reveal {
@@ -329,10 +336,6 @@ section:nth-child(1) {
 
 // 3rd section - mathias
 
-.information__paragraph--you { // added info - need more points!?
-  transform: translateX(70%) translateY(40%);
-  font-size: 1.2rem;
-}
 
 li {
   margin: 5px;

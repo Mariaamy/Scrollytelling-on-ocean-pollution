@@ -462,33 +462,115 @@
 
 @-webkit-keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%) translateX(-160%);
-            transform: translateY(20%) translateX(-160%);
+    -webkit-transform: translateY(20%) translateX(0%);
+            transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
-            transform: translateY(420%) translateX(-160%) rotate(180deg);
+    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
+            transform: translateY(600%) translateX(-350%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
-            transform: translateY(420%) translateX(-10%) rotate(180deg);
+    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
+            transform: translateY(600%) translateX(-350%) rotate(180deg);
     opacity: 0;
   }
 }
 
 @keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%) translateX(-160%);
-            transform: translateY(20%) translateX(-160%);
+    -webkit-transform: translateY(20%) translateX(0%);
+            transform: translateY(20%) translateX(0%);
   }
   50% {
-    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
-            transform: translateY(420%) translateX(-160%) rotate(180deg);
+    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
+            transform: translateY(600%) translateX(-350%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
-            transform: translateY(420%) translateX(-10%) rotate(180deg);
+    -webkit-transform: translateY(600%) translateX(-350%) rotate(180deg);
+            transform: translateY(600%) translateX(-350%) rotate(180deg);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
+}
+
+@keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
+}
+
+@-webkit-keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
+            transform: translateY(1300%) translateX(65%) rotate(180deg);
+  }
+}
+
+@keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(1300%) translateX(65%) rotate(180deg);
+            transform: translateY(1300%) translateX(65%) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(1125%) translateX(-20%);
+            transform: translateY(1125%) translateX(-20%);
+  }
+}
+
+@keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(1125%) translateX(-20%);
+            transform: translateY(1125%) translateX(-20%);
   }
 }
 
@@ -560,9 +642,9 @@ body {
           animation: bottlepath 20s forwards linear;
 }
 
-.fish.svg {
-  -webkit-transform: translateX(300%) translatey(-2800%);
-          transform: translateX(300%) translatey(-2800%);
+.active.fishpath {
+  -webkit-transform: translateX(10%) translatey(-10%);
+          transform: translateX(10%) translatey(-10%);
   -webkit-animation: fishpath 20s forwards;
           animation: fishpath 20s forwards;
 }
@@ -695,10 +777,6 @@ section .text {
 
 .text__box {
   color: #26999f;
-  font-family: rigid-square, sans-serif;
-  font-style: normal;
-  font-size: 1.5rem;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -739,12 +817,25 @@ section:nth-child(2) .text__box {
   padding: 1.5rem;
   width: 35vw;
   height: 55vh;
-  color: #124a4d;
+  color: #175e61;
+  font-family: rigid-square, sans-serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.citations,
+.information__paragraph--fngoal,
+.text__box {
+  font-family: rigid-square, sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .citations {
   padding: 5%;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -839,21 +930,6 @@ section:nth-child(2) .text__box {
           animation: fiskegarnfalldown 10s forwards;
 }
 
-@-webkit-keyframes fishstopper {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-20%);
-            transform: translateY(200%) translateX(-20%);
-  }
-  100% {
-    -webkit-transform: translateY(885%) translateX(-20%);
-            transform: translateY(885%) translateX(-20%);
-  }
-}
-
 @keyframes fishstopper {
   0% {
     -webkit-transform: translateX(440%) translateY(165%);
@@ -876,21 +952,6 @@ section:nth-child(2) .text__box {
           animation: fishstopper 10s forwards;
 }
 
-@-webkit-keyframes fiskegarnfalldown {
-  0% {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  50% {
-    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
-            transform: translateY(180%) translateX(65%) rotate(180deg);
-  }
-  100% {
-    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
-            transform: translateY(950%) translateX(65%) rotate(180deg);
-  }
-}
-
 @keyframes fiskegarnfalldown {
   0% {
     -webkit-transform: translateX(65%) rotate(180deg);
@@ -903,17 +964,6 @@ section:nth-child(2) .text__box {
   100% {
     -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
             transform: translateY(950%) translateX(65%) rotate(180deg);
-  }
-}
-
-@-webkit-keyframes fiskefinnerbevegelse {
-  from {
-    -webkit-transform: skew(5deg);
-            transform: skew(5deg);
-  }
-  to {
-    -webkit-transform: skew(-5deg);
-            transform: skew(-5deg);
   }
 }
 
@@ -931,12 +981,6 @@ section:nth-child(2) .text__box {
 #fish__tail--top, #fish__tail--bottom {
   -webkit-animation: fiskefinnerbevegelse 2s infinite alternate;
           animation: fiskefinnerbevegelse 2s infinite alternate;
-}
-
-.information__paragraph--you {
-  -webkit-transform: translateX(70%) translateY(40%);
-          transform: translateX(70%) translateY(40%);
-  font-size: 1.2rem;
 }
 
 li {

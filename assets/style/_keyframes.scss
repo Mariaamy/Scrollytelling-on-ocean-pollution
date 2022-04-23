@@ -56,6 +56,38 @@
     }
   }
 
+  @keyframes bottlepath {
+    0% {
+      transform: translate(300%, -50%) rotate(30deg);
+    }
+    50% {
+      opacity: 50%;
+      transform: translate(300%, 100%) rotate(-20deg);
+    }
+    100% {
+      opacity: 10%;
+      transform: translate(300%, 125%) rotate(-20deg);
+    }
+  }
+
+  @keyframes fishpath {
+    0% {
+      margin-left: 100%;
+    }
+    100% {
+      margin-left: -110%;
+    }
+  }
+
+  @keyframes fishfinside {
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+
   @keyframes plasticbagpath {
     0% {
       opacity: 0%;
@@ -115,4 +147,12 @@ to {transform: rotate(-20deg);}
 @keyframes turtlemouth {
 from {transform: rotate(15deg);}
 to {transform: rotate(-30deg);}
+}
+
+@keyframes fiskegarnanimation {
+  0% { transform:translateY(20%) translateX(-160%);}
+  50% {transform:translateY(420%) translateX(-160%) rotate(180deg);}
+  100% {
+    transform: translateY(420%) translateX(-10%) rotate(180deg);
+    opacity: 0;}
 }

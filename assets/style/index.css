@@ -132,11 +132,11 @@
   75% {
     -webkit-transform: translateY(0%) translatex(-250%) scale(90%);
             transform: translateY(0%) translatex(-250%) scale(90%);
-    opacity: 100%;
+    opacity: 50%;
   }
   100% {
-    -webkit-transform: translateY(100%) translatex(-200%) scale(100%);
-            transform: translateY(100%) translatex(-200%) scale(100%);
+    -webkit-transform: translateY(30%) translatex(-200%) scale(100%);
+            transform: translateY(30%) translatex(-200%) scale(100%);
     opacity: 0%;
   }
 }
@@ -157,46 +157,48 @@
   75% {
     -webkit-transform: translateY(0%) translatex(-250%) scale(90%);
             transform: translateY(0%) translatex(-250%) scale(90%);
-    opacity: 100%;
+    opacity: 50%;
   }
   100% {
-    -webkit-transform: translateY(100%) translatex(-200%) scale(100%);
-            transform: translateY(100%) translatex(-200%) scale(100%);
+    -webkit-transform: translateY(30%) translatex(-200%) scale(100%);
+            transform: translateY(30%) translatex(-200%) scale(100%);
     opacity: 0%;
   }
 }
 
 @-webkit-keyframes bottlepath {
   0% {
-    -webkit-transform: translate(300%, -50%) rotate(30deg);
-            transform: translate(300%, -50%) rotate(30deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, -110%) rotate(30deg);
+            transform: translate(220%, -110%) rotate(30deg);
   }
   50% {
-    opacity: 50%;
-    -webkit-transform: translate(300%, 100%) rotate(-20deg);
-            transform: translate(300%, 100%) rotate(-20deg);
+    opacity: 80%;
+    -webkit-transform: translate(220%, 100%) rotate(-20deg);
+            transform: translate(220%, 100%) rotate(-20deg);
   }
   100% {
-    opacity: 10%;
-    -webkit-transform: translate(300%, 125%) rotate(-20deg);
-            transform: translate(300%, 125%) rotate(-20deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, 125%) rotate(-20deg);
+            transform: translate(220%, 125%) rotate(-20deg);
   }
 }
 
 @keyframes bottlepath {
   0% {
-    -webkit-transform: translate(300%, -50%) rotate(30deg);
-            transform: translate(300%, -50%) rotate(30deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, -110%) rotate(30deg);
+            transform: translate(220%, -110%) rotate(30deg);
   }
   50% {
-    opacity: 50%;
-    -webkit-transform: translate(300%, 100%) rotate(-20deg);
-            transform: translate(300%, 100%) rotate(-20deg);
+    opacity: 80%;
+    -webkit-transform: translate(220%, 100%) rotate(-20deg);
+            transform: translate(220%, 100%) rotate(-20deg);
   }
   100% {
-    opacity: 10%;
-    -webkit-transform: translate(300%, 125%) rotate(-20deg);
-            transform: translate(300%, 125%) rotate(-20deg);
+    opacity: 0%;
+    -webkit-transform: translate(220%, 125%) rotate(-20deg);
+            transform: translate(220%, 125%) rotate(-20deg);
   }
 }
 
@@ -315,28 +317,6 @@
     -webkit-transform: translate(-50%, 297%) rotate(215deg);
             transform: translate(-50%, 297%) rotate(215deg);
     z-index: 1;
-  }
-}
-
-@-webkit-keyframes armrotate {
-  from {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(0deg);
-            transform: translatey(-100%) translatex(785%) rotate(0deg);
-  }
-  to {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(60deg);
-            transform: translatey(-100%) translatex(785%) rotate(60deg);
-  }
-}
-
-@keyframes armrotate {
-  from {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(0deg);
-            transform: translatey(-100%) translatex(785%) rotate(0deg);
-  }
-  to {
-    -webkit-transform: translatey(-100%) translatex(785%) rotate(60deg);
-            transform: translatey(-100%) translatex(785%) rotate(60deg);
   }
 }
 
@@ -519,12 +499,14 @@
           box-sizing: border-box;
 }
 
-.active.armrotate, #jellyfish__leg--two,
-#jellyfish__leg--four,
-#jellyfish__leg--six, #sturtle__frontfoot--right,
+#sturtle__frontfoot--right,
 #sturtle__backfoot--right,
 #sturtle__frontfoot--left,
-#sturtle__backfoot--left, #sturtle__mouth {
+#sturtle__backfoot--left,
+#sturtle__mouth,
+#jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
@@ -562,13 +544,6 @@ body {
   border-top-color: #e0ffff;
   -webkit-animation: bounce 1s infinite alternate;
           animation: bounce 1s infinite alternate;
-}
-
-.active.armrotate {
-  -webkit-transform: translatey(-100%) translatex(785%);
-          transform: translatey(-100%) translatex(785%);
-  -webkit-animation: armrotate 3s forwards ease-out;
-          animation: armrotate 3s forwards ease-out;
 }
 
 .active.colapath {
@@ -807,7 +782,6 @@ section:nth-child(2) .text__box {
   section .text__container,
   .active.fade-left,
   .heading::before,
-  .information__paragraph--introduction::before,
   .svg__fish--eye,
   .svg__fiskegarn,
   .active.bottlepath {

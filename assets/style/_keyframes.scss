@@ -48,25 +48,26 @@
     }
     75% {
       transform: translateY(0%) translatex(-250%) scale(90%);
-      opacity: 100%;
+      opacity: 50%;
     }
     100% {
-      transform: translateY(100%) translatex(-200%) scale(100%);
+      transform: translateY(30%) translatex(-200%) scale(100%);
       opacity: 0%
     }
   }
 
   @keyframes bottlepath {
     0% {
-      transform: translate(300%, -50%) rotate(30deg);
+      opacity: 0%;
+      transform: translate(220%, -110%) rotate(30deg);
     }
     50% {
-      opacity: 50%;
-      transform: translate(300%, 100%) rotate(-20deg);
+      opacity: 80%;
+      transform: translate(220%, 100%) rotate(-20deg);
     }
     100% {
-      opacity: 10%;
-      transform: translate(300%, 125%) rotate(-20deg);
+      opacity: 0%;
+      transform: translate(220%, 125%) rotate(-20deg);
     }
   }
 
@@ -113,10 +114,6 @@
       z-index: 1};
   }
 
-  @keyframes armrotate {
-    from {transform: translatey(-100%) translatex(785%) rotate(0deg);}
-    to   {transform: translatey(-100%) translatex(785%) rotate(60deg);}
-  }
 
   @keyframes movejellyfishlegs {
     from {transform: rotatez(-5deg);}

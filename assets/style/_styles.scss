@@ -12,9 +12,12 @@ body {
     overflow-x: hidden;
 }
 
+//Triangle credits: Kevin Powell's youtube video: https://www.youtube.com/watch?v=fFJH6dguuqo&t=681s
+
 .heading {
   @include font(3rem, 700);
   text-shadow: -1px 0 $container, 0 1px $container, 1px 0 $container, 0 -1px $container;
+  // inspiration for the text border is from the following stackoverflow thread: https://stackoverflow.com/questions/2570972/css-font-border
   margin-top: -15rem;
   animation: textfromleft 5s forwards ease-out;
   animation-iteration-count: 1;
@@ -30,11 +33,6 @@ body {
     animation: bounce 1s infinite alternate;
 }
 
-.active.armrotate {
-  @extend %transform;
-  transform: translatey(-100%) translatex(785%);
-  animation: armrotate 3s forwards ease-out;
-}
 
 .active.colapath {
   animation: colapath 15s forwards ease-out;
@@ -61,10 +59,20 @@ body {
   z-index: 2;
 }
 
+#sturtle__frontfoot--right,
+#sturtle__backfoot--right,
+#sturtle__frontfoot--left,
+#sturtle__backfoot--left,
+#sturtle__mouth,
 #jellyfish__leg--two,
 #jellyfish__leg--four,
 #jellyfish__leg--six {
-    @extend %transform;
+  @extend %transform;
+}
+
+#jellyfish__leg--two,
+#jellyfish__leg--four,
+#jellyfish__leg--six {
     animation: movejellyfishlegs 3s infinite alternate;
 }
 
@@ -83,12 +91,11 @@ body {
 #sturtle__backfoot--right,
 #sturtle__frontfoot--left,
 #sturtle__backfoot--left {
-  @extend %transform;
   animation: turtlefeet 2s infinite alternate linear;
 }
 
+
 #sturtle__mouth {
-  @extend %transform;
   animation: turtlemouth 1s ease-out infinite alternate;
 }
 
@@ -230,7 +237,6 @@ section:nth-child(1) {
     section .text__container,
     .active.fade-left,
     .heading::before,
-    .information__paragraph--introduction::before,
     .svg__fish--eye,
     .svg__fiskegarn,
     .active.bottlepath
@@ -253,7 +259,11 @@ section:nth-child(1) {
     }
 }
 
-  // kode for mathias
+
+
+
+
+// kode for mathias
 
 .test {
   border: solid;

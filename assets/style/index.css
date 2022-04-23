@@ -408,32 +408,32 @@
 
 @-webkit-keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
+    -webkit-transform: translateY(20%) translateX(-160%);
+            transform: translateY(20%) translateX(-160%);
   }
   50% {
-    -webkit-transform: translateY(420%) rotate(180deg);
-            transform: translateY(420%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
+            transform: translateY(420%) translateX(-160%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(420%) rotate(180deg);
-            transform: translateY(420%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
+            transform: translateY(420%) translateX(-10%) rotate(180deg);
     opacity: 0;
   }
 }
 
 @keyframes fiskegarnanimation {
   0% {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
+    -webkit-transform: translateY(20%) translateX(-160%);
+            transform: translateY(20%) translateX(-160%);
   }
   50% {
-    -webkit-transform: translateY(420%) rotate(180deg);
-            transform: translateY(420%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-160%) rotate(180deg);
+            transform: translateY(420%) translateX(-160%) rotate(180deg);
   }
   100% {
-    -webkit-transform: translateY(420%) rotate(180deg);
-            transform: translateY(420%) rotate(180deg);
+    -webkit-transform: translateY(420%) translateX(-10%) rotate(180deg);
+            transform: translateY(420%) translateX(-10%) rotate(180deg);
     opacity: 0;
   }
 }
@@ -739,170 +739,142 @@ section:nth-child(2) .text-box {
   }
 }
 
-/* kode for mathias */
 .test {
   border: solid;
 }
 
 .information__paragraph--fngoal {
-  -webkit-transform: translateX(550%) translateY(50%);
-          transform: translateX(550%) translateY(50%);
-}
-
-/* section 1 - mathias - animasjoner */
-.svg__fish--eye {
-  -webkit-transform: translateX(440%) translateY(185%);
-          transform: translateX(440%) translateY(185%);
-  -webkit-animation: fishstopper2 6s forwards;
-          animation: fishstopper2 6s forwards;
-}
-
-#fish__tail--bottom, #fish__tail--top {
-  -webkit-transform: skew(-10deg);
-          transform: skew(-10deg);
+  -webkit-transform: translateX(140%) translateY(50%);
+          transform: translateX(140%) translateY(50%);
+  width: 60rem;
+  font-size: 1.3rem;
 }
 
 .svg__fiskegarn {
-  -webkit-animation: fiskegarnanimation 10s forwards infinite;
-          animation: fiskegarnanimation 10s forwards infinite;
-}
-
-@-webkit-keyframes fishstopper {
-  from {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  to {
-    -webkit-transform: translateY(200%) translateX(-30%);
-            transform: translateY(200%) translateX(-30%);
-  }
-}
-
-@keyframes fishstopper {
-  from {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  to {
-    -webkit-transform: translateY(200%) translateX(-30%);
-            transform: translateY(200%) translateX(-30%);
-  }
-}
-
-@-webkit-keyframes fishstopper2 {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-30%);
-            transform: translateY(200%) translateX(-30%);
-  }
-  100% {
-    -webkit-transform: translateY(390%) translateX(-30%);
-            transform: translateY(390%) translateX(-30%);
-  }
-}
-
-@keyframes fishstopper2 {
-  0% {
-    -webkit-transform: translateX(440%) translateY(165%);
-            transform: translateX(440%) translateY(165%);
-  }
-  50% {
-    -webkit-transform: translateY(200%) translateX(-30%);
-            transform: translateY(200%) translateX(-30%);
-  }
-  100% {
-    -webkit-transform: translateY(390%) translateX(-30%);
-            transform: translateY(390%) translateX(-30%);
-  }
-}
-
-@-webkit-keyframes fiskegarnfalldown {
-  from {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  to {
-    -webkit-transform: translateX(65%) translateY(420%) rotate(180deg);
-            transform: translateX(65%) translateY(420%) rotate(180deg);
-  }
-}
-
-@keyframes fiskegarnfalldown {
-  from {
-    -webkit-transform: translateX(65%) rotate(180deg);
-            transform: translateX(65%) rotate(180deg);
-  }
-  to {
-    -webkit-transform: translateX(65%) translateY(420%) rotate(180deg);
-            transform: translateX(65%) translateY(420%) rotate(180deg);
-  }
+  -webkit-animation: fiskegarnanimation 10s forwards;
+          animation: fiskegarnanimation 10s forwards;
 }
 
 .svg__fiskegarn--2 {
   -webkit-transform: translateX(65%) rotate(180deg);
           transform: translateX(65%) rotate(180deg);
+  z-index: 1;
   -webkit-animation: fiskegarnfalldown 10s forwards;
           animation: fiskegarnfalldown 10s forwards;
-  z-index: 1;
+}
+
+@-webkit-keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(885%) translateX(-20%);
+            transform: translateY(885%) translateX(-20%);
+  }
+}
+
+@keyframes fishstopper {
+  0% {
+    -webkit-transform: translateX(440%) translateY(165%);
+            transform: translateX(440%) translateY(165%);
+  }
+  50% {
+    -webkit-transform: translateY(200%) translateX(-20%);
+            transform: translateY(200%) translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(885%) translateX(-20%);
+            transform: translateY(885%) translateX(-20%);
+  }
+}
+
+.svg__fish--eye {
+  -webkit-transform: translateX(440%) translateY(185%);
+          transform: translateX(440%) translateY(185%);
+  -webkit-animation: fishstopper 10s forwards;
+          animation: fishstopper 10s forwards;
+}
+
+@-webkit-keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
+            transform: translateY(950%) translateX(65%) rotate(180deg);
+  }
+}
+
+@keyframes fiskegarnfalldown {
+  0% {
+    -webkit-transform: translateX(65%) rotate(180deg);
+            transform: translateX(65%) rotate(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(180%) translateX(65%) rotate(180deg);
+            transform: translateY(180%) translateX(65%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateY(950%) translateX(65%) rotate(180deg);
+            transform: translateY(950%) translateX(65%) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
+}
+
+@keyframes fiskefinnerbevegelse {
+  from {
+    -webkit-transform: skew(5deg);
+            transform: skew(5deg);
+  }
+  to {
+    -webkit-transform: skew(-5deg);
+            transform: skew(-5deg);
+  }
+}
+
+#fish__tail--top, #fish__tail--bottom {
+  -webkit-animation: fiskefinnerbevegelse 2s infinite alternate;
+          animation: fiskefinnerbevegelse 2s infinite alternate;
 }
 
 .information__paragraph--you {
-  /* need to add text to index.html under this part! */
-  -webkit-transform: translateX(600%) translateY(30%);
-          transform: translateX(600%) translateY(30%);
+  -webkit-transform: translateX(70%) translateY(40%);
+          transform: translateX(70%) translateY(40%);
+  font-size: 1.2rem;
 }
 
-.svg__fish--bottom {
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
-}
-
-.svg__fiskegarn--bottom {
-  -webkit-transform: translateX(-110%) rotate(180deg);
-          transform: translateX(-110%) rotate(180deg);
-}
-
-.bottom__fish--stuck {
-  -webkit-animation: fishstuckbottom 5s forwards;
-          animation: fishstuckbottom 5s forwards;
-  /* added forwards */
-}
-
-@-webkit-keyframes fishstuckbottom {
-  /* need to move the rocks and the other stuff that is located in the bottom section! */
-  from {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  to {
-    -webkit-transform: translateY(85%);
-            transform: translateY(85%);
-  }
-}
-
-@keyframes fishstuckbottom {
-  /* need to move the rocks and the other stuff that is located in the bottom section! */
-  from {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  to {
-    -webkit-transform: translateY(85%);
-            transform: translateY(85%);
-  }
+li {
+  margin: 5px;
 }
 
 .svg__jellyfish--small {
-  -webkit-transform: translateX(500%) translateY(320%);
-          transform: translateX(500%) translateY(320%);
+  -webkit-transform: translateX(900%) translateY(320%);
+          transform: translateX(900%) translateY(320%);
 }
 
 .svg__jellyfish--small2 {
-  -webkit-transform: translateX(200%) translateY(320%);
-          transform: translateX(200%) translateY(320%);
+  -webkit-transform: translateX(1100%) translateY(320%);
+          transform: translateX(1100%) translateY(320%);
 }
 
 #sjellyfish__leg--five, #sjellyfish__leg--four, #sjellyfish__leg--one, #sjellyfish__leg--two, #sjellyfish__leg--three {
@@ -925,7 +897,6 @@ section:nth-child(2) .text-box {
           transform: translateY(60%) translateX(-260%);
 }
 
-/* havbunnen delen - plasseringer */
 .svg__colabox {
   -webkit-transform: translateX(80%) translateY(10%);
           transform: translateX(80%) translateY(10%);

@@ -2,7 +2,7 @@
 
 IDG1293 Assignment 3
 
-The project consists of a scrollytelling story, which portraits ocean life and how it is affeced by pollution in regards to United Nations sustainable developmental goal number 14.
+The project consists of a scrollytelling story, which portraits ocean life and how it is affeced by pollution in regards to United Nations sustainable development goal number 14.
 
 The project is useful as it aims to spread awareness around plastic polution and what it does to the enviroment, especially the ocean.
 

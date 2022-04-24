@@ -160,7 +160,7 @@ section:nth-child(12) .ocean__bottom--yellow {
 }
 
 section .text {
-  margin: 100px;
+  margin: 5rem;
 }
 
 .text__box {
@@ -170,18 +170,14 @@ section .text {
 
 section .text__container {
   display: flex;
-  @include mp(10px, 35px);
+  @include mp(5rem, 2rem);
   background: $container;
   transition: transform 1s;
 }
 
   
 section .text__container:nth-child(1):hover {
-  transform: scale(1.2) translateX(8%);
-}
-
-section .text__container:nth-child(3):hover {
-  transform: scale(1.1) translatex(-10%) translatey(70%);
+  transform: scale(1.4);
 }
   
 section:nth-child(2) .text__box {
@@ -190,7 +186,7 @@ section:nth-child(2) .text__box {
 }
 
 .information__paragraph--fngoal {
-  @include wh(60rem, 50vh);
+  @include wh(40rem, 80vh);
   color: darken($text-in-container, 10%);
   transform: translateX(10%);
   position: relative;
@@ -198,15 +194,23 @@ section:nth-child(2) .text__box {
   margin: auto !important;
 }
 
-.information__paragraph--you {
+.active.fade-left-second {
+  animation: fade-left-second 3s ease-in forwards;
+}
+
+.information__paragraph--conclusion {
   opacity: 90%;
   background-color: $container;
-  padding: 1.5rem;
-  @include wh(70rem, 50vh);
-  transform: translatex(-10%) translatey(70%);
+  padding: 2rem;
+  @include wh(30rem, 50vh);
+  transform: translatex(10%) translatey(70%);
   color: darken($text-in-container, 15%);
   @include font(1.2rem, 400);
   margin: auto;
+}
+
+.active.fade-left-third {
+  animation: fade-left-third 3s ease-in forwards;
 }
 
 .citations,
@@ -214,7 +218,6 @@ section:nth-child(2) .text__box {
 .text__box {
   @include font(1.5rem, 400);
 }
-  
 
 .citations {
   padding: 5%;
@@ -248,15 +251,11 @@ section:nth-child(2) .text__box {
 
 .active.fishstopper {
   transform: translateX(440%) translateY(185%);
-  animation: fishstopper 10s 1s forwards; 
+  animation: fishstopper 10s 750ms forwards; 
 }
 
 #fish__tail--top, #fish__tail--bottom { 
   animation: fiskefinnerbevegelse 2s infinite alternate;
-}
-
-li {
-  margin: 5px;
 }
 
 .svg__jellyfish--small {
@@ -346,16 +345,22 @@ li {
   .svg__fish--eye,
   .svg__fiskegarn,
   .active.bottlepath,
-  section .text__container:nth-child(3):hover,
   section .text__container:nth-child(1):hover,
+  section .text__container:nth-child(2):hover,
+  section .text__container:nth-child(3):hover,
   .active.fishpath,
   #sjellyfish__leg--five,
   #sjellyfish__leg--four,
   #sjellyfish__leg--one,
   #sjellyfish__leg--two,
-  #sjellyfish__leg--three {
+  #sjellyfish__leg--three,
+  .active.fade-left-second,
+  .active.fade-left-third,
+  #fish__fin--side,
+  #fish__tail--top, 
+  #fish__tail--bottom {
     animation: none;
-    transition: none;
+    transform: scale(1);
   } 
 }
 

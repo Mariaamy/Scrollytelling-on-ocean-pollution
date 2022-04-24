@@ -1,21 +1,16 @@
 /* 
-Intersection observer from https://alvarotrigo.com/blog/css-animations-scroll/
+Intersection observer from Web Dev Simplified: https://www.youtube.com/watch?v=2IbRtjez6ag
 */
 
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-  
-  window.addEventListener("scroll", reveal);
+const reveals = document.querySelectorAll(".reveal")
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("active", entry.isIntersecting)
+  })
+})
+
+
+reveals.forEach(reveal => {
+  observer.observe(reveal)
+})
